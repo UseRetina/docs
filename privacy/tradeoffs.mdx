@@ -1,0 +1,30 @@
+---
+title: "Tradeoffs"
+description: "What you give up to keep portfolio data on your device."
+---
+
+Local-first is the right default for portfolio data. It is also a set of explicit tradeoffs.
+
+## Per-device, per-browser
+
+Your snapshots and wallets live in the browser storage of the current browser on the current device. They do not follow you to a second device. Opening Retina in Chrome on your laptop and Safari on your phone gives you 2 separate setups.
+
+## Clearing site data deletes it
+
+Browsers expose a "Clear site data" or "Clear browsing data" action. Running it for `useretina.xyz` deletes every snapshot, wallet, manual position, and the Diapleo key.
+
+<Warning>
+There is no Retina-side backup. If you clear site data without exporting, the data is gone. Export from the [Positions](/pages/positions) page before clearing.
+</Warning>
+
+## No background snapshotting
+
+When the tab is closed, no snapshots are created. Snapshots are always taken when you click **+ Snapshot** with the tab open.
+
+## No team-shared portfolios
+
+A portfolio is bound to its browser. There is no shared workspace, no read-only link, no team view.
+
+## Sync is on the roadmap
+
+Multi-device sync via Arcium Multi-Party Computation is planned but not shipped. See [Roadmap](/roadmap).

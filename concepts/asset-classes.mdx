@@ -1,0 +1,22 @@
+---
+title: "Asset classes"
+description: "Asset class in Retina means economic exposure, not position type."
+---
+
+In Retina, **asset class** is the economic exposure category of a position. It is not the same as [position type](/concepts/position-types). A staked ETH LST is the position type "Staking" and the asset class "ETH".
+
+## The classes
+
+| Class | What goes in it |
+| --- | --- |
+| **USD** | Stablecoins and USD-denominated positions |
+| **BTC** | BTC and BTC-backed assets, including LSTs |
+| **ETH** | ETH and ETH-derived assets, including LSTs |
+| **HYPE** | Hyperliquid-native assets and derivatives, including LSTs |
+| **Other** | Anything that does not fit a class above |
+| **Metals** | Physical gold and silver |
+| **Polymarket** | Open Polymarket positions |
+
+## Why economic exposure
+
+If you hold 1 ETH directly, 1 wstETH on Lido, and 1 weETH on EtherFi, all 3 move with the price of ETH. Grouping them as "Staking" or "Wallet" tells you how you hold them. Grouping them as **ETH** tells you what you are exposed to. The Dashboard's Economic Asset Allocation pie uses the asset class so the slices add up to a real exposure breakdown.

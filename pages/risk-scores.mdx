@@ -1,0 +1,32 @@
+---
+title: "Risk scores"
+description: "Wallet and protocol risk, powered by Diapleo."
+---
+
+The Risk Scores page surfaces risk data from [Diapleo](https://diapleo.com). The page has 2 tabs.
+
+<Warning>
+Wallet scanning requires your own Diapleo API key. The free tier covers limited protocol risk only. Diapleo Pro is required for wallet scanning, sub-score breakdowns, and higher rate limits. Generate a key at [diapleo.com/profile](https://diapleo.com/profile) and paste it in the page. Without a key, you can still see the global Protocols index.
+</Warning>
+
+<Tabs>
+  <Tab title="Wallet Scan">
+    Paste a wallet address. Diapleo returns:
+
+    - **Portfolio grade**: A through F
+    - **Sanctions check**: against OFAC, EU, and UK lists
+    - **Concentration analysis**: how much portfolio value sits in any one position, protocol, or chain
+    - **Risk surface across 6 dimensions**: Credit, Counterparty, Liquidity, Oracle, Smart Contract, Liquidity Trap
+    - **Per-protocol exposure table**: composite risk score per protocol and that protocol's contribution to total portfolio risk
+  </Tab>
+  <Tab title="Protocols">
+    A global index of every protocol Diapleo tracks. Sortable by composite risk. Columns include:
+
+    - Category
+    - Chains
+    - TVL
+    - Incident signals
+
+    This tab works without an API key.
+  </Tab>
+</Tabs>

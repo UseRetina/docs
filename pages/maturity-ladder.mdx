@@ -1,0 +1,43 @@
+---
+title: "Maturity ladder"
+description: "Every time-locked position sorted by how close it is to maturity."
+---
+
+The Maturity Ladder is where you see what is unlocking and when. Every time-locked position in the active snapshot is sorted into a bucket.
+
+## Default buckets
+
+| Bucket | Meaning |
+| --- | --- |
+| **EXPIRED** | Maturity already passed, redeemable now |
+| **TODAY** | Matures today |
+| **URGENT** | Very soon |
+| **NEAR** | Next few weeks |
+| **MID** | Next month or 2 |
+| **FAR** | Further out |
+| **LOCKED** | Locked without a fixed maturity date |
+
+Bucket thresholds are customizable.
+
+## Summary header
+
+Count and total value per bucket, across the top of the page.
+
+## Unlock Runway
+
+A chart of value unlocking over time.
+
+## Ladder table
+
+Filterable table below the chart. Columns:
+
+- Bucket
+- Maturity date
+- Days from today
+- Wallet
+- Protocol
+- Token
+- Instrument
+- Value
+
+See [Maturity and locked positions](/concepts/maturity) for where each maturity date comes from.

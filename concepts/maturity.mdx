@@ -1,0 +1,33 @@
+---
+title: "Maturity and locked positions"
+description: "Where each maturity date comes from, and how the ladder buckets work."
+---
+
+A maturity is the date a time-locked position becomes redeemable. The [Maturity Ladder](/pages/maturity-ladder) sorts every locked position by how close that date is.
+
+## Where maturity comes from
+
+| Protocol / source | Maturity is |
+| --- | --- |
+| **Pendle** | PT redemption date |
+| **Fixed-term vaults** | The lock-end date the vault advertises |
+| **Polymarket** | Market resolution date |
+| **Manual position** | The date you entered when creating the position |
+
+For positions that are locked without a fixed unlock date (some staking products, some vaults), Retina puts them in the **LOCKED** bucket rather than guessing a date.
+
+## How bucketing works
+
+Every locked position falls into 1 of 7 buckets based on the gap between today and its maturity:
+
+| Bucket | Meaning |
+| --- | --- |
+| **EXPIRED** | Maturity passed, redeemable now |
+| **TODAY** | Matures today |
+| **URGENT** | Very soon |
+| **NEAR** | Next few weeks |
+| **MID** | Next month or 2 |
+| **FAR** | Further out |
+| **LOCKED** | No fixed maturity date |
+
+Bucket thresholds are customizable from the Maturity Ladder page.

@@ -1,0 +1,14 @@
+---
+title: "Perps and staking"
+description: "Hyperliquid public API for perps, staking, and spot."
+---
+
+**Hyperliquid** is the data source for perps, staking, and spot positions on Hyperliquid. Retina queries the Hyperliquid public API directly with the wallet address you provided.
+
+Surfaced data:
+
+- **Perps**: open positions with size, entry, mark, P&L, funding
+- **Staking**: staked HYPE, validator, accrued rewards
+- **Spot**: token balances on Hyperliquid spot
+
+For perp APY, Retina uses the live funding rate from Hyperliquid. See [Position model](/concepts/position-model) for how APY is derived in general.
