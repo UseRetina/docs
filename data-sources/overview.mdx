@@ -1,0 +1,29 @@
+---
+title: "Overview"
+description: "How Retina pulls portfolio data, and from where."
+---
+
+Retina has no backend database of your portfolio. When the app needs data, it calls public APIs directly from your browser and stores the result locally. Every page in the app is built on top of these providers.
+
+## Providers by category
+
+| Category | Providers |
+| --- | --- |
+| [Prices](/data-sources/prices) | CoinGecko, GoldApi |
+| [EVM wallets and positions](/data-sources/evm) | Zerion |
+| [Solana wallets and positions](/data-sources/solana) | Helius, Jupiter, Vybe Network, Moralis, Ledger |
+| [Perps and staking](/data-sources/perps-and-staking) | Hyperliquid |
+| [Prediction markets](/data-sources/prediction-markets) | Polymarket |
+| [Yield data](/data-sources/yield-data) | Pendle, DeFiLlama |
+| [Risk scoring](/data-sources/risk-scoring) | Diapleo |
+| [Airdrops and rewards](/data-sources/airdrops-and-rewards) | DropsBot, Merkl, Pendle |
+
+## How requests are made
+
+Most providers are queried directly from the browser. A few requests go through a thin Cloudflare Function proxy so the app does not have to ship third-party API keys. The proxy does not store your wallet addresses or your portfolio data.
+
+{/* TODO: confirm exact set of providers proxied vs called directly, from functions/api/ */}
+
+## What happens if a provider is down
+
+Retina fails gracefully per provider. If Pendle is rate-limited, the rest of the dashboard still loads, but Pendle-sourced APYs may be missing. Cards that depend on a stalled provider may show a refresh state.

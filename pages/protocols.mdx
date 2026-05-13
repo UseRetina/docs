@@ -1,0 +1,21 @@
+---
+title: "Protocols"
+description: "Every protocol you have positions in, with APY, total value, maturity, and historical performance."
+---
+
+The Protocols view collapses every position into one row per protocol. It answers: "How much do I have on Pendle? On Hyperliquid? On Upshift?"
+
+## Columns
+
+- **Protocol**: the platform name.
+- **Positions**: how many positions you hold there, across all wallets.
+- **Value**: total USD value on this protocol.
+- **APY**: blended APY across your positions on the protocol.
+- **Maturity**: nearest upcoming maturity, if any.
+- **Historical performance**: how your exposure to this protocol has changed over time. {/* TODO: confirm whether historical performance is a column, a chart, or a drill-in view in dashboard.html */}
+
+## How protocols are detected
+
+Protocols are inferred from position metadata returned by the upstream providers (Zerion for EVM, Helius and friends for Solana, Pendle for fixed-yield, DeFiLlama for pools). Retina normalizes the names so the same protocol shows up consistently across chains.
+
+See [APY, daily income, normalization](/concepts/apy-and-normalization).

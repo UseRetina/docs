@@ -1,0 +1,26 @@
+---
+title: "Risk scoring"
+description: "How Retina scores portfolio and protocol risk."
+---
+
+## Provider
+
+### Diapleo
+
+Diapleo powers the [Risk Scores](/pages/risk-scores) view. Retina sends:
+
+- The protocols you have positions in.
+- The wallets you have added (for sanctions screening).
+
+{/* TODO: confirm exactly what is sent to Diapleo and what the privacy implications are, from functions/api/ */}
+
+Diapleo returns:
+
+- A portfolio grade.
+- Sanctions check results.
+- Per-protocol scoring across six dimensions.
+
+## Where it shows up
+
+- [Risk Scores](/pages/risk-scores): the dedicated view.
+- [Dashboard](/pages/dashboard): the portfolio grade may surface as a top-line score. {/* TODO: confirm whether the dashboard surfaces the grade or only a link to the Risk Scores view */}

@@ -1,0 +1,45 @@
+---
+title: "Solana wallets and positions"
+description: "How Retina indexes Solana."
+---
+
+Solana coverage is multi-provider because no single API covers Solana DeFi well.
+
+## Providers
+
+### Helius
+
+Account balances and on-chain history. Helius is the primary RPC layer for Solana data.
+
+### Jupiter
+
+Token metadata and Solana DEX positions.
+
+### Vybe Network
+
+DeFi positions and protocol-level data for Solana.
+
+### Moralis
+
+Additional token and position data.
+
+### Ledger
+
+{/* TODO: confirm the exact role of Ledger in the Solana pipeline from functions/api/ */}
+
+## How they combine
+
+Retina queries the providers in parallel for each Solana wallet and merges the results into one normalized position list. Where providers disagree on value, the app falls back to the source most likely to be correct for that asset class.
+
+{/* TODO: confirm the exact precedence rules from scripts/ */}
+
+## Where Solana data shows up
+
+- [Dashboard](/pages/dashboard): chain breakdown, top protocols, asset class breakdown.
+- [Wallets](/pages/wallets): per-wallet values and position counts.
+- [Yield Table](/pages/yield-table): every Solana yield position.
+- [Protocols](/pages/protocols): Solana-side protocol roll-up.
+
+## Solana DeFi roadmap
+
+Solana DeFi coverage is expanding via direct RPC reverse-engineering for protocols that providers do not surface well. See [Roadmap](/roadmap).

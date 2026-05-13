@@ -1,0 +1,29 @@
+---
+title: "EVM wallets and positions"
+description: "How Retina indexes EVM chains."
+---
+
+EVM coverage runs through Zerion.
+
+## Provider
+
+### Zerion
+
+Zerion is the primary source for EVM. For each wallet you add, Retina queries Zerion for:
+
+- Token balances across supported chains (Ethereum, Arbitrum, Optimism, Base, Polygon, Avalanche, and others).
+- DeFi positions: deposits, LP positions, staked positions, debt.
+- NFTs. {/* TODO: confirm whether NFTs are surfaced in the UI or only fetched */}
+
+Zerion's response is normalized into Retina's internal position model (chain, protocol, asset class, type, value, maturity if applicable, APY if applicable). See [APY, daily income, normalization](/concepts/apy-and-normalization).
+
+## Where EVM data shows up
+
+- [Dashboard](/pages/dashboard): contributes to the total, the chain breakdown, the top protocols, and the asset class breakdown.
+- [Wallets](/pages/wallets): per-wallet values and position counts.
+- [Yield Table](/pages/yield-table): every EVM yield position.
+- [Protocols](/pages/protocols): EVM-side protocol roll-up.
+
+## Polymarket on EVM
+
+Polymarket runs on Polygon, but Polymarket positions are pulled from the Polymarket API directly, not via Zerion. See [Prediction markets](/data-sources/prediction-markets).

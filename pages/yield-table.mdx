@@ -1,0 +1,27 @@
+---
+title: "Yield Table"
+description: "Every yield-bearing position with live APY and daily income."
+---
+
+The Yield Table is one row per yield-bearing position across all your wallets. It is the view you use to see what is actually earning, how much, and where.
+
+## Columns
+
+- **Protocol**: the platform holding the position (Pendle, Upshift, Hyperliquid, and others).
+- **Asset**: the underlying token.
+- **Value**: current USD value of the position.
+- **APY**: the live yield rate reported by the protocol or by Pendle/DeFiLlama for the underlying pool.
+- **Daily income**: APY applied to current value, expressed as a per-day number.
+- **Maturity**: the date the position becomes redeemable, if it is time-locked.
+
+{/* TODO: confirm full column set and sort options from dashboard.html */}
+
+## What this view is for
+
+- Comparing yields across protocols on the same screen.
+- Spotting positions where APY has decayed below your threshold.
+- Sanity-checking that your daily income matches what you expect.
+
+## Data sources
+
+APYs and pool data come from Pendle and DeFiLlama. Position values come from Zerion (EVM) and Helius, Jupiter, Vybe Network, and Moralis (Solana). See [Yield data](/data-sources/yield-data) and [EVM data](/data-sources/evm).

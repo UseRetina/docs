@@ -1,0 +1,30 @@
+---
+title: "Asset classes"
+description: "The top-level categories Retina groups positions into."
+---
+
+An **asset class** is the top-level category of a position. Retina uses asset class as the first axis on the dashboard and the breakdown views.
+
+## The classes
+
+### DeFi positions
+
+Yield-bearing positions on EVM and Solana. Lending markets, fixed-yield vaults, LP positions, staking derivatives. Pulled from Zerion (EVM) and Helius, Jupiter, Vybe Network, and Moralis (Solana), with APY data from Pendle and DeFiLlama.
+
+### Prediction markets
+
+Polymarket positions. Tracked per wallet with entry, current price, P&L, days to expiry, and win APR. See the [Polymarket](/pages/polymarket) view.
+
+### Perps and staking
+
+Hyperliquid perps and staking positions. Pulled from the Hyperliquid API.
+
+### Physical metals
+
+Gold and other precious metals. Prices pulled from GoldApi. {/* TODO: confirm exact metals supported and whether they are manual entries or pulled from another source */}
+
+### Custom positions
+
+Anything else you want to track that Retina cannot detect automatically. You enter the position manually with a value, an optional APY, and an optional maturity. Custom positions roll into the same dashboard, yield, and maturity views as everything else.
+
+{/* TODO: confirm the custom-positions UI and the exact fields available, from dashboard.html */}

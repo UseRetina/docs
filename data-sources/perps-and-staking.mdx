@@ -1,0 +1,21 @@
+---
+title: "Perps and staking"
+description: "How Retina tracks Hyperliquid positions."
+---
+
+## Provider
+
+### Hyperliquid
+
+Hyperliquid is queried directly for each wallet you have added. Retina pulls:
+
+- Open perp positions: size, entry, mark, unrealized P&L, funding accrued.
+- Staking positions: amount staked, staking rewards.
+
+{/* TODO: confirm exact field set surfaced in the UI from dashboard.html */}
+
+## Where it shows up
+
+- [Dashboard](/pages/dashboard): contributes to the perps and staking asset class.
+- [Yield Table](/pages/yield-table): staking positions appear here with their APY. Perp funding rates may also appear as an APY column. {/* TODO: confirm whether perp funding is treated as APY in the Yield Table */}
+- [Protocols](/pages/protocols): Hyperliquid roll-up.

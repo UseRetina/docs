@@ -1,0 +1,27 @@
+---
+title: "Supported chains and protocols"
+description: "A broad view of what Retina currently covers."
+---
+
+Retina's coverage is broad and evolving. This page lists the chains and protocol categories you can rely on today. It is not exhaustive.
+
+## Chains
+
+- **EVM**: Ethereum, Arbitrum, Optimism, Base, Polygon, Avalanche, and others reachable via Zerion.
+- **Solana**: SPL tokens and Solana DeFi, via Helius, Jupiter, Vybe Network, and Moralis.
+- **Bitcoin**: via the providers that surface BTC balances. {/* TODO: confirm BTC coverage and the exact provider from functions/ */}
+
+## Protocol categories
+
+- **EVM DeFi**: lending, vaults, LP positions, and staking derivatives surfaced by Zerion.
+- **Fixed yield**: Pendle PT, YT, and LP positions, with maturities and live APY.
+- **Solana DeFi**: positions surfaced by Helius, Jupiter, Vybe Network, and Moralis.
+- **Perps and staking**: Hyperliquid.
+- **Prediction markets**: Polymarket.
+- **Yield references**: DeFiLlama, used to fill in APY for pools that providers do not score directly.
+- **Risk scoring**: Diapleo.
+- **Airdrops and rewards**: DropsBot, Merkl, Pendle.
+
+If a protocol is not listed here but it is something a provider surfaces, Retina will usually pick it up. Coverage expands as Retina improves Solana DeFi reverse-engineering and adds providers.
+
+See [Data sources](/data-sources/overview) for what each provider contributes.

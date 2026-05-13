@@ -1,0 +1,35 @@
+---
+title: "Portfolio tracker vs wallet viewer"
+description: "The core framing that explains what Retina actually does."
+---
+
+Most tools that call themselves portfolio trackers are wallet viewers. The distinction matters because they answer different questions.
+
+## What a wallet viewer does
+
+A wallet viewer shows you the contents of a specific wallet on a specific chain. Examples:
+
+- **DeBank** for EVM wallets.
+- **Jupiter** for Solana wallets.
+- **Polymarket** for your Polymarket positions.
+- Every yield protocol has its own dashboard for the positions it holds.
+
+Each one is good at the slice it covers. None of them talk to each other.
+
+A wallet viewer tells you:
+
+> You have 4,500 USDC on Upshift.
+
+## What a portfolio tracker does
+
+A portfolio tracker joins data across wallets, chains, and asset classes into one view. The same position, seen from a portfolio tracker:
+
+> You have 4,500 USDC on Upshift, it matures on May 30, you are earning 4.5% APY on it, it represents 1.4% of your total portfolio, and you have 3 other positions maturing in the same week.
+
+The numbers are the same. The framing is different. You can act on the second one.
+
+## Why this matters for Retina
+
+Retina is the second kind. Every page in the app is built on positions that have already been normalized into one model, so the dashboard, the [Yield Table](/pages/yield-table), the [Maturity Ladder](/pages/maturity-ladder), and the [Protocols](/pages/protocols) view all use the same underlying data.
+
+This is also why Retina pulls from many providers instead of one. No single provider covers DeFi, prediction markets, perps, staking, metals, and custom entries. Retina pulls from each, normalizes, and joins.

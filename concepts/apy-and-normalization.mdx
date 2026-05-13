@@ -1,0 +1,34 @@
+---
+title: "APY, daily income, normalization"
+description: "How Retina turns raw protocol data into comparable numbers."
+---
+
+Every position in Retina is normalized into the same shape so the dashboard, the [Yield Table](/pages/yield-table), and the [Protocols](/pages/protocols) view can compare across them.
+
+## The normalized position
+
+Every position carries:
+
+- **Chain**: the chain it lives on.
+- **Protocol**: the platform (Pendle, Upshift, Hyperliquid, Polymarket, others).
+- **Asset class**: DeFi, prediction market, perp, metal, custom.
+- **Type**: more specific than asset class (PT, vault deposit, LP, perp position, market share).
+- **Value**: current USD value.
+- **Maturity**: the redemption date, if applicable.
+- **APY**: the annualized yield, if applicable.
+
+This shape is the same whether the position came from Zerion, Helius, Pendle, or a custom entry.
+
+## How APY is computed
+
+- For protocols that report APY directly (Pendle, Hyperliquid staking, many EVM vaults), Retina uses the reported value.
+- For pools where the protocol does not report APY directly, Retina falls back to **DeFiLlama** for the pool's published APY.
+- For perps funding rates, APY uses the live funding rate. {/* TODO: confirm how Hyperliquid perp funding is annualized in scripts/ */}
+
+## Daily income
+
+Daily income is APY applied to the current value of the position, divided to a per-day number. It is shown next to APY on the [Yield Table](/pages/yield-table) so you can see what each position contributes per day.
+
+<Note>
+  Daily income assumes APY is constant over a day. Real yields fluctuate. Treat the number as a useful estimate, not a forecast.
+</Note>

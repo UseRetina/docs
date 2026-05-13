@@ -1,0 +1,61 @@
+---
+title: "Quickstart"
+description: "Open Retina, add your first wallets, and load the dashboard."
+---
+
+This walks you through opening the app, adding one EVM wallet, adding one Solana wallet, and getting to a populated dashboard.
+
+## Prerequisites
+
+- The beta password. See [Beta access](/beta-access).
+- At least one EVM address or one Solana address you want to track. Public addresses only, no private keys.
+
+## Add your wallets
+
+<Steps>
+  <Step title="Open the app">
+    Go to [useretina.xyz](https://useretina.xyz) and enter the password.
+  </Step>
+  <Step title="Add an EVM wallet">
+    <Tabs>
+      <Tab title="EVM">
+        Paste an Ethereum address (`0x...`). Retina queries Zerion for balances and positions across EVM chains.
+      </Tab>
+      <Tab title="Solana">
+        Paste a Solana address. Retina queries Helius, Jupiter, Vybe Network, and Moralis for SPL tokens, DeFi positions, and NFTs.
+      </Tab>
+    </Tabs>
+
+    {/* TODO: confirm exact button label and setup flow copy from setup.html */}
+  </Step>
+  <Step title="Label the wallet (optional)">
+    Give the wallet a name so you can recognize it later. The label only lives in your browser.
+  </Step>
+  <Step title="Add more wallets">
+    Repeat for every wallet you want to track. Retina is designed for operators with many wallets across many chains.
+  </Step>
+  <Step title="Open the dashboard">
+    Once at least one wallet is added, the dashboard loads. You see total portfolio value, breakdown by asset class, and your active positions.
+  </Step>
+</Steps>
+
+## What to do next
+
+<CardGroup cols={2}>
+  <Card title="Dashboard" icon="gauge" href="/pages/dashboard">
+    Total value, watchlist, asset class breakdown, top protocols.
+  </Card>
+  <Card title="Yield Table" icon="percent" href="/pages/yield-table">
+    Every yield-bearing position with live APY.
+  </Card>
+  <Card title="Maturity Ladder" icon="calendar" href="/pages/maturity-ladder">
+    Time-locked positions sorted by expiry.
+  </Card>
+  <Card title="Risk Scores" icon="shield" href="/pages/risk-scores">
+    Portfolio grade, sanctions check, concentration analysis.
+  </Card>
+</CardGroup>
+
+<Warning>
+  Your wallets are stored in browser storage. Clearing site data, switching browsers, or switching devices means re-adding them. Multi-device sync is on the [roadmap](/roadmap).
+</Warning>

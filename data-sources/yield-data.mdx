@@ -1,0 +1,32 @@
+---
+title: "Yield data"
+description: "How Retina sources APY and maturity data."
+---
+
+Value data tells you how much you have. Yield data tells you what it is earning. Retina pulls yield data separately from position data.
+
+## Providers
+
+### Pendle
+
+Used for:
+
+- Fixed-yield PT positions, with explicit maturity dates and implied APY.
+- Pool-level APY data for Pendle markets.
+
+### DeFiLlama
+
+Used for:
+
+- APY on DeFi pools that providers do not score directly.
+- Cross-checking APY where multiple sources disagree.
+
+## Where it shows up
+
+- [Yield Table](/pages/yield-table): every APY and daily income number.
+- [Maturity Ladder](/pages/maturity-ladder): Pendle maturities, vault lock dates.
+- [Protocols](/pages/protocols): blended APY per protocol.
+
+## Normalization
+
+Different providers report yields differently. Retina normalizes everything into a single APY field per position. See [APY, daily income, normalization](/concepts/apy-and-normalization).

@@ -1,0 +1,27 @@
+---
+title: "Polymarket"
+description: "Per-wallet Polymarket positions with entry, current price, shares, P&L, days to expiry, and win APR."
+---
+
+The Polymarket view shows every open Polymarket position across the wallets you have added. Positions come directly from the Polymarket API.
+
+## Columns
+
+- **Market**: the market question.
+- **Side**: Yes or No.
+- **Shares**: how many shares you hold.
+- **Entry**: average entry price.
+- **Current price**: the live market price.
+- **P&L**: unrealized profit or loss.
+- **Days to expiry**: time until the market resolves.
+- **Win APR**: annualized return if the position resolves in your favor.
+
+{/* TODO: confirm exact column names and that "win APR" is the in-app label from dashboard.html */}
+
+## How positions are grouped
+
+Polymarket positions are tied to the EVM wallet that holds them. The view groups by wallet so you can see exposure per address.
+
+## Snapshots
+
+Polymarket state is included in [History](/pages/history) snapshots. You can open a past snapshot and see the markets you held at that point in time, with the prices and P&L from that moment.

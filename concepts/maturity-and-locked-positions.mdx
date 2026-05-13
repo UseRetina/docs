@@ -1,0 +1,25 @@
+---
+title: "Maturity and locked positions"
+description: "How Retina tracks time-locked capital."
+---
+
+A **maturity** is the date a time-locked position becomes redeemable. Retina treats maturity as a first-class field on every position that has one.
+
+## Where maturity comes from
+
+- **Pendle**: PT tokens have an explicit redemption date. Pendle's API returns it directly.
+- **Fixed-term vaults**: Upshift and similar vaults publish lock-end dates. {/* TODO: confirm exact provider path for Upshift and similar fixed-term vaults */}
+- **Polymarket**: every market has a resolution date. Polymarket positions carry that as their maturity.
+- **Custom positions**: you can enter a maturity yourself when you add the position.
+
+If a provider does not surface a maturity, the position has no maturity field and does not show up in the [Maturity Ladder](/pages/maturity-ladder).
+
+## Locked vs liquid
+
+The dashboard splits your portfolio into locked and liquid. A position is **locked** if it has a maturity in the future and you cannot exit it without penalty before then. Everything else is **liquid**.
+
+{/* TODO: confirm the exact rule for liquid vs locked: is it any future maturity, or does it require a hard lock with no early exit? */}
+
+## Bucketing in the ladder
+
+The [Maturity Ladder](/pages/maturity-ladder) groups positions by how far out they mature. Default buckets are expired, urgent, near-term, and long-term. You can adjust the thresholds.

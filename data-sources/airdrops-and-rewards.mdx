@@ -1,0 +1,32 @@
+---
+title: "Airdrops and rewards"
+description: "How Retina finds claimable tokens across your wallets."
+---
+
+The [Rewards](/pages/rewards) view is built on three providers.
+
+## Providers
+
+### DropsBot
+
+Airdrop eligibility and claim status. DropsBot is queried per wallet for known and ongoing airdrops.
+
+### Merkl
+
+Protocol rewards distributed through Merkl. Surfaces unclaimed reward amounts per wallet per protocol.
+
+### Pendle
+
+Pendle-native rewards for PT, YT, and LP holders.
+
+## What is shown
+
+- Pending claim amounts per source.
+- Estimated USD value at the current price (via [Prices](/data-sources/prices)).
+- The wallet that is eligible.
+
+{/* TODO: confirm whether claim links are surfaced in the UI from dashboard.html */}
+
+## What Retina does not do
+
+Retina does not claim for you. The app is read-only and never signs transactions. To claim, use your wallet on the protocol's site.

@@ -1,0 +1,38 @@
+---
+title: "Tradeoffs"
+description: "The things local-first costs you, and how Retina handles them."
+---
+
+Running entirely in the browser has real downsides. The right way to read this section is: here are the constraints, here is how Retina works around them, here is what is still genuinely worse.
+
+## One device at a time
+
+Your wallets and snapshots live in browser storage on the device and browser you added them on. If you open Retina on a different machine, the wallet list is empty.
+
+The current workaround is to re-add wallets on the new device. The wallet list is short for most operators; this is annoying but not catastrophic.
+
+Multi-device sync is on the [Roadmap](/roadmap).
+
+## Clearing browser data wipes Retina
+
+Clearing site data for `useretina.xyz` removes your wallets, labels, custom positions, and snapshots. So does using a browser's incognito mode that does not persist storage.
+
+<Warning>
+  If you intend to keep history, do not clear site data and do not switch browsers without exporting first. {/* TODO: confirm export flow exists in the UI */}
+</Warning>
+
+## You re-enter custom positions
+
+Manual positions only exist where you entered them. Treat custom positions as device-local data.
+
+## Refresh cost is on you
+
+Every refresh hits the upstream APIs from your browser. Rate limits affect you directly. The app is designed to be conservative with calls, but it cannot pre-warm a cache the way a hosted product can.
+
+## What is genuinely worse
+
+- No multi-device sync today.
+- No background snapshotting when the tab is closed.
+- No team-shared portfolios.
+
+If those are deal-breakers, Retina is not the right tool yet. See [Roadmap toward sync](/privacy/roadmap-toward-sync) for what changes when sync ships.

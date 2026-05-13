@@ -1,0 +1,48 @@
+---
+title: "Introduction"
+description: "Retina is a local-first portfolio tracker for crypto and adjacent assets."
+---
+
+Retina is a portfolio tracker that runs entirely in your browser. You add wallet addresses, and Retina pulls positions from public APIs and shows everything you own in one place.
+
+## Portfolio tracker, not wallet viewer
+
+Most tools that call themselves "portfolio trackers" are wallet viewers. They show you what is in one wallet on one chain. DeBank does this for EVM, Jupiter does it for Solana, Polymarket has its own page, every yield protocol has its own page. None of them talk to each other.
+
+A wallet viewer tells you:
+
+> You have 4,500 USDC on Upshift.
+
+A portfolio tracker tells you:
+
+> You have 4,500 USDC on Upshift, it matures on May 30, you are earning 4.5% APY on it, it represents 1.4% of your total portfolio, and you have 3 other positions maturing in the same week.
+
+Retina is the second kind. Every position from every source is normalized into the same internal model so you can compare across chains, protocols, and asset classes.
+
+## Local-first
+
+There is no account. There is no database. You never connect a wallet. The app runs in your browser, holds your wallet addresses in browser storage, and queries public APIs directly. Your portfolio data stays on your device.
+
+<Note>
+  Retina is in private beta at [useretina.xyz](https://useretina.xyz). Access is password-gated. See [Beta access](/beta-access) for how to request the password.
+</Note>
+
+## What you can track
+
+- EVM and Solana wallets (read-only, addresses only)
+- DeFi yield positions with live APY and maturity dates
+- Polymarket positions with P&L and days to expiry
+- Hyperliquid perps and staking
+- Physical metals
+- Custom positions you enter manually
+
+## Next
+
+<CardGroup cols={2}>
+  <Card title="Beta access" icon="key" href="/beta-access">
+    Get the password and open the app.
+  </Card>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Add your first wallets and load the dashboard.
+  </Card>
+</CardGroup>

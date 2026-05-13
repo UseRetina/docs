@@ -1,0 +1,24 @@
+---
+title: "Dashboard"
+description: "The default view: total portfolio value, breakdowns, and what is happening next."
+---
+
+The dashboard is what you see when you open the app after adding wallets. It is the high-level summary of everything Retina tracks for you.
+
+## What you see
+
+- **Total portfolio value**: the sum of every position across every wallet, every chain, every asset class.
+- **Watchlist**: assets and positions you have pinned for quick reference. {/* TODO: confirm watchlist scope (tokens, positions, both) from dashboard.html */}
+- **Breakdown by asset class**: how your portfolio splits across DeFi, prediction markets, perps and staking, metals, and custom positions.
+- **Locked vs liquid**: how much of your capital is in time-locked positions and how much is immediately movable.
+- **Chain distribution**: value per chain.
+- **Top protocols**: the protocols holding the largest share of your portfolio.
+- **Upcoming maturities**: time-locked positions that mature soon, surfaced from the [Maturity Ladder](/pages/maturity-ladder).
+
+## How it updates
+
+The dashboard recalculates when wallet data refreshes. Prices come from CoinGecko, EVM positions from Zerion, Solana positions from Helius, Jupiter, Vybe Network, and Moralis. See [Data sources](/data-sources/overview) for the full list.
+
+<Note>
+  Numbers reflect what the upstream APIs returned on the most recent refresh. If a provider is rate-limited or down, the affected card may show stale or partial data.
+</Note>

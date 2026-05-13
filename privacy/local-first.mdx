@@ -1,0 +1,23 @@
+---
+title: "Local-first explained"
+description: "What local-first means in Retina, in concrete terms."
+---
+
+Retina runs in your browser. That sentence is the whole architecture.
+
+## What Retina does not have
+
+- **No account.** There is no signup, no login, no email, no profile. Beta access is a password, nothing more.
+- **No database.** Retina does not persist your wallets, positions, or snapshots on any server.
+- **No wallet connection.** You never sign anything. The app cannot move funds because it cannot see private keys.
+- **No analytics on your portfolio.** Retina does not log which wallets you added or what positions you hold.
+
+## What Retina does have
+
+- **Browser storage.** Your wallets, labels, custom positions, and snapshots live in your browser, on the device and browser you opened the app in.
+- **Direct API calls.** When the app needs prices, balances, or yield data, the browser calls the relevant API. A thin proxy is used for a few providers to avoid shipping keys, and the proxy is stateless. {/* TODO: confirm which providers are proxied from functions/api/ */}
+- **Read-only addresses.** You give the app addresses. The app reads chain data for those addresses. That is the entire flow.
+
+## The trust boundary
+
+The trust boundary is your browser. Nothing inside your browser is shared, by Retina, with anyone. The providers Retina calls see the addresses you query for (this is true of any portfolio tool that uses public APIs), but they do not get a unified view of your portfolio because Retina is the thing doing the unification, locally.

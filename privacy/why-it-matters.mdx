@@ -1,0 +1,26 @@
+---
+title: "Why it matters"
+description: "Why local-first is the right shape for a portfolio tracker."
+---
+
+Portfolio data is sensitive. It is the closest thing in your digital life to a complete financial picture.
+
+## What a server-side tracker sees
+
+A typical hosted portfolio tracker requires:
+
+- Your email or account.
+- The list of wallets you have added.
+- Often, signed messages from those wallets.
+
+Once you do that, the operator of the tool has a permanent record of your total net worth, your protocol exposure, your maturity schedule, and your trading history. So does anyone who breaches them. So does anyone they sell to.
+
+## What Retina sees
+
+Retina, as a product, sees nothing about you. The app code runs in your browser. There is no server-side state to leak.
+
+The providers Retina queries see only the public addresses you choose to add, which they could see anyway (any blockchain explorer shows the same data). The point is that no one party gets to join all of it together. That join only happens inside your browser.
+
+## The tradeoff
+
+Local-first means your data is yours. It also means your data lives on one device. See [Tradeoffs](/privacy/tradeoffs).

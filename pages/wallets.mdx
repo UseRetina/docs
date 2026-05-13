@@ -1,0 +1,28 @@
+---
+title: "Wallets"
+description: "Every wallet you have added, broken down by chain, position count, value, and portfolio weight."
+---
+
+The Wallets view is one row per wallet. It is how you see what each address is contributing to your portfolio.
+
+## Columns
+
+- **Wallet**: the label you set, plus the address.
+- **Chain**: the chain or chains the wallet has activity on.
+- **Positions**: how many positions Retina found in the wallet.
+- **Value**: total USD value held in the wallet.
+- **Portfolio weight**: the wallet's share of your total portfolio.
+
+{/* TODO: confirm exact column names from dashboard.html */}
+
+## Adding and removing wallets
+
+You add wallets during onboarding and from this view. Removing a wallet drops it from every other view immediately. Wallet labels and addresses live in browser storage, so they are local to the device.
+
+<Warning>
+  Removing a wallet does not affect the wallet itself. Retina never signs anything. The wallet is read-only here.
+</Warning>
+
+## Supported chains
+
+Retina supports EVM chains via Zerion and Solana via Helius, Jupiter, Vybe Network, and Moralis. See [Supported chains and protocols](/concepts/supported-chains-and-protocols).

@@ -1,0 +1,28 @@
+---
+title: "History"
+description: "Portfolio snapshots over time, with the full ledger and click-into past states."
+---
+
+History is the time dimension of your portfolio. Retina stores snapshots locally and lets you scroll back through them.
+
+## What is stored
+
+- **Snapshots**: a snapshot is the full state of your portfolio at a point in time. Total value, every position, every wallet, every protocol.
+- **Ledger**: the per-position history that backs the snapshot.
+- **Polymarket state**: each snapshot includes your Polymarket positions as they stood at that moment, with the entry, current price at the time, and P&L from that point.
+
+{/* TODO: confirm snapshot frequency (manual, automatic, on-refresh) from dashboard.html */}
+
+## What you can do
+
+- Open a past snapshot and view the dashboard as it looked then.
+- Compare two snapshots to see what changed.
+- Export the ledger. {/* TODO: confirm export is exposed in the UI */}
+
+## Where snapshots live
+
+Snapshots live in browser storage on the device you took them on. If you clear site data, snapshots are gone. Multi-device sync is on the [roadmap](/roadmap).
+
+<Warning>
+  Snapshots are local. Back up anything you care about before clearing browser storage or switching browsers.
+</Warning>

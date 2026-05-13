@@ -1,0 +1,34 @@
+---
+title: "Roadmap toward sync"
+description: "How multi-device sync will work without breaking the local-first promise."
+---
+
+Multi-device sync is the most-requested missing feature. It is also the one that, done wrong, would throw out the entire point of Retina.
+
+The plan is to ship sync without giving any single server a view of your raw portfolio data.
+
+## Arcium MPC
+
+Retina's planned approach uses **Arcium Multi-Party Computation (MPC)**. Portfolio data is split across nodes such that no single node sees the raw input. Computation happens across the nodes, the result comes back, and the original data is never reconstructed in one place.
+
+In practical terms:
+
+- Your wallets, snapshots, and custom positions can be synced across your devices.
+- No server holds a plaintext copy of your portfolio.
+- Even a complete compromise of any single node does not reveal your data.
+
+## What this means for you
+
+- When sync ships, you opt in. Today's local-only mode keeps working unchanged.
+- The trust model stays roughly the same as local-first: no single party should ever see your full portfolio.
+- The performance profile is different from a normal cloud sync. Expect tradeoffs in latency and refresh patterns.
+
+{/* TODO: confirm the exact scope of what gets synced (wallets only, or wallets plus snapshots plus custom positions) once the design is finalized */}
+
+## Status
+
+This is roadmap, not shipped. See [Roadmap](/roadmap) for current priorities.
+
+<Note>
+  Until sync ships, treat Retina as a single-device product. If you need to move to a new device, re-add your wallets there.
+</Note>

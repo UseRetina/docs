@@ -1,0 +1,29 @@
+---
+title: "Prices"
+description: "Where Retina gets token and metal prices."
+---
+
+Prices are the foundation of every value shown in the app. They drive the dashboard total, every per-position value, and the P&L numbers.
+
+## Providers
+
+### CoinGecko
+
+Used for spot prices on tokens across EVM and Solana. CoinGecko is queried for the assets Retina has detected in your wallets and on your custom positions.
+
+### GoldApi
+
+Used for spot prices on physical metals. Powers the metals portion of [Asset classes](/concepts/asset-classes).
+
+{/* TODO: confirm exact metals coverage from functions/ */}
+
+## Where prices show up
+
+- The dashboard total and the chain and protocol breakdowns.
+- The [Yield Table](/pages/yield-table) (current value per position).
+- The [Polymarket](/pages/polymarket) view (entry, current price, P&L).
+- The [Wallets](/pages/wallets) and [Protocols](/pages/protocols) views.
+
+## Refresh behavior
+
+Prices refresh on the same cadence as position data. There is no separate price feed running in the background.

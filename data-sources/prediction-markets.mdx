@@ -1,0 +1,22 @@
+---
+title: "Prediction markets"
+description: "How Retina tracks Polymarket positions."
+---
+
+## Provider
+
+### Polymarket
+
+Polymarket is queried directly. For each EVM wallet you have added, Retina fetches:
+
+- Open positions: market, side, shares, entry price.
+- Current market prices for those positions.
+- Resolution dates and metadata.
+
+P&L and win APR are computed locally from those fields.
+
+## Where it shows up
+
+- [Polymarket page](/pages/polymarket): the primary view, with one row per position.
+- [Dashboard](/pages/dashboard): contributes to the prediction markets asset class.
+- [History](/pages/history): snapshots include your Polymarket state at the time the snapshot was taken.

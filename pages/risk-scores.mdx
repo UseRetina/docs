@@ -1,0 +1,23 @@
+---
+title: "Risk Scores"
+description: "Portfolio grade, sanctions check, concentration analysis, and per-protocol risk."
+---
+
+Risk Scores give you a structured read on how exposed your portfolio is. Scoring is powered by Diapleo.
+
+## What you see
+
+- **Portfolio grade**: an overall score for your portfolio.
+- **Sanctions check**: flags wallets or counterparties that show up on sanctions lists.
+- **Concentration analysis**: how much of your portfolio sits in a single protocol, chain, or asset.
+- **Per-protocol risk**: a breakdown across six dimensions for each protocol you have exposure to.
+
+{/* TODO: confirm the names of the six risk dimensions from dashboard.html */}
+
+## Where the data comes from
+
+Risk data is pulled from Diapleo. Retina sends the protocol identifiers it has detected from your wallets and Diapleo returns the scoring.
+
+<Note>
+  Risk Scores are informational. They are not investment advice and they do not catch every risk. Use them to find things worth looking into, not as the only filter.
+</Note>

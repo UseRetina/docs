@@ -1,0 +1,31 @@
+---
+title: "Maturity Ladder"
+description: "Time-locked positions sorted into customizable buckets by expiry."
+---
+
+The Maturity Ladder is for managing time-locked capital. It takes every position that has a maturity date, buckets it by how soon it expires, and shows you the total value per bucket.
+
+## Default buckets
+
+- **Expired**: maturity has already passed and the position is redeemable now.
+- **Urgent**: maturing very soon.
+- **Near-term**: maturing in the next few weeks.
+- **Long-term**: maturing further out.
+
+{/* TODO: confirm exact bucket names and default thresholds from dashboard.html */}
+
+You can adjust the bucket thresholds to match how you think about your portfolio.
+
+## What counts as a maturity
+
+Maturity is the date a time-locked position becomes redeemable. Examples:
+
+- Pendle PT tokens: maturity is the redemption date of the principal.
+- Upshift and similar fixed-term vaults: maturity is the end of the lock.
+- Polymarket: positions resolve at market expiry. Polymarket positions show in the [Polymarket](/pages/polymarket) view; whether they also appear in the ladder depends on configuration. {/* TODO: confirm whether Polymarket positions appear in the Maturity Ladder */}
+
+## Why this view exists
+
+If you run many positions across many protocols, the question "what is unlocking next week" is hard to answer with a wallet viewer. The Maturity Ladder is the answer to that question.
+
+See [Maturity and locked positions](/concepts/maturity-and-locked-positions).
