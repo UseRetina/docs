@@ -1,0 +1,39 @@
+---
+title: "Dashboard"
+description: "Portfolio overview for the active snapshot."
+---
+
+The Dashboard is the landing page. Everything on it reads from the active snapshot (shown at the top of the sidebar). The delta you see on the Portfolio Total card is the change against the previous snapshot, not a live tick.
+
+## Top cards
+
+- **Portfolio Total**: total USD value for the active snapshot, with the absolute and percentage change since the previous snapshot.
+- **Metals**: physical gold and silver holdings with editable weights and the current spot price.
+- **Active Protocols**: count of protocols you hold a position in, and total position count.
+- **Watchlist**: editable token prices. BTC, ETH, SOL, and HYPE are shown by default. Click the ✎ icon to customize.
+
+## Allocation views
+
+- **Economic Asset Allocation**: pie split by [asset class](/concepts/asset-classes) (USD, BTC, ETH, HYPE, Other, Metals, Polymarket).
+- **Locked vs Liquid**: share of value that is time-locked vs immediately redeemable.
+- **Chain Distribution**: share of value per chain.
+- **Top Protocols** and **Top Holdings by Value**: ranked tables.
+
+## Upcoming Maturities
+
+Time-locked positions grouped by urgency. For the full ladder with every bucket and the Unlock Runway chart, see [Maturity Ladder](/pages/maturity-ladder).
+
+## Yield Table
+
+Every yield-bearing position in the active snapshot. Columns:
+
+- **Protocol**
+- **Value**
+- **APY**
+- **Estimated / Day**: APY applied to current value, divided to a per-day number
+- **Source**: the data provider that surfaced the position
+- **Manual APY**: optional override for positions where Retina cannot read a reliable APY
+
+<Note>
+APY values in the Yield Table are live, not snapshotted. The rest of the Dashboard is the frozen state of the active snapshot.
+</Note>

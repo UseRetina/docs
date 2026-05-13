@@ -1,0 +1,20 @@
+---
+title: "Yield data"
+description: "How APY, pool stats, and maturity are sourced."
+---
+
+Retina uses 2 providers for yield data, in order of preference.
+
+## Pendle
+
+**Pendle** is the source for everything related to PT, YT, and Pendle pools:
+
+- PT redemption date (used as the maturity in the [Maturity Ladder](/pages/maturity-ladder))
+- Pool APY
+- Pool stats
+
+## DeFiLlama
+
+**DeFiLlama** is the fallback for pools that do not report APY directly to Retina via the protocol's own API or Zerion. When a position has no protocol-reported APY, Retina queries DeFiLlama for the pool and uses that number.
+
+See [Position model](/concepts/position-model) for the full APY resolution order.

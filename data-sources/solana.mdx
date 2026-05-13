@@ -1,0 +1,16 @@
+---
+title: "Solana wallets and positions"
+description: "Several providers combined for full Solana coverage."
+---
+
+Solana coverage is built from several providers because no single one surfaces every protocol Retina users hold:
+
+- **Helius**: account data, token balances, transactions
+- **Jupiter**: token data and pricing context
+- **Vybe Network**: wallet and protocol-level positions
+- **Moralis**: token and account data
+- **Ledger**: account data
+
+Each provider returns positions in its own shape. Retina normalizes them into the [position model](/concepts/position-model) and deduplicates so the same on-chain position is not counted twice across providers.
+
+{/* TODO: confirm dedup rules between Helius / Vybe / Moralis */}

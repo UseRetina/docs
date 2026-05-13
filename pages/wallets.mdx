@@ -1,0 +1,32 @@
+---
+title: "Wallets"
+description: "Every wallet you track, with its chains and value."
+---
+
+The Wallets page is the per-wallet view of the active snapshot.
+
+## Wallet Value summary
+
+A 3-column header splitting total value by **EVM**, **Solana**, and **Other** (manual positions, CEX, anything not on chain).
+
+## Wallets table
+
+One row per wallet:
+
+| Column | What it shows |
+| --- | --- |
+| Wallet | Label and address |
+| Chains | Chains where positions were found |
+| Positions | Position count |
+| Value | Total USD value |
+| Weight % | Share of total portfolio |
+
+## Spot Wallet Holdings
+
+Below the table, a token-level view. One row per token across every wallet, with:
+
+- Token
+- Wallet count (how many of your wallets hold it)
+- Total value
+
+Use this view to find duplicates across wallets and dust that adds up.

@@ -1,0 +1,35 @@
+---
+title: "Introduction"
+description: "Retina is a local-first portfolio tracker for crypto and adjacent assets."
+---
+
+Retina is a portfolio tracker for crypto, prediction markets, and physical metals. It runs entirely in your browser at [useretina.xyz](https://useretina.xyz). There is no account, no database, no wallet connection, no email.
+
+## Wallet viewer vs portfolio tracker
+
+Most tools you have used are **wallet viewers**: they show what is in one wallet on one chain. DeBank does this for EVM, Jupiter for Solana, Polymarket has its own page, every yield protocol has its own page. None of them talk to each other.
+
+A wallet viewer tells you: "You have 4,500 USDC on Upshift."
+
+A portfolio tracker tells you: "You have 4,500 USDC on Upshift, it matures on May 30, you are earning 4.5% APY on it, it represents 1.4% of your total portfolio, and you have 3 other positions maturing in the same week."
+
+Retina is the second kind.
+
+## Local-first
+
+When you open the app, the code runs in your browser. You paste wallet addresses (read-only), Retina pulls data directly from public APIs, and everything stays on your device. A thin stateless proxy is used for a few providers to avoid shipping keys to the client; the proxy stores nothing. See [Local-first explained](/privacy/local-first) for the full picture.
+
+## Snapshots
+
+Every page in Retina reads from the currently selected **snapshot**, shown at the top of the sidebar (for example `Snapshot #1 | 2026-05-12`). A snapshot captures the full state of your portfolio at one moment: every position, every wallet, every Polymarket market, every metal holding, with the prices, APYs, and maturities at that time. You create snapshots manually with the **+ Snapshot** button. The value of the product is comparing snapshots over time. See [Snapshots](/concepts/snapshots).
+
+## Next
+
+<CardGroup cols={2}>
+  <Card title="Beta access" icon="key" href="/getting-started/beta-access">
+    How to request the password.
+  </Card>
+  <Card title="Quickstart" icon="rocket" href="/getting-started/quickstart">
+    Password to first snapshot in 5 steps.
+  </Card>
+</CardGroup>

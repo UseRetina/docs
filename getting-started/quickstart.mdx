@@ -1,0 +1,58 @@
+---
+title: "Quickstart"
+description: "From the password screen to your first snapshot."
+---
+
+This is the first-time flow, end to end. You only see the setup wizard the first time. After that, you land on the Dashboard.
+
+## Prerequisites
+
+- A password (see [Beta access](/getting-started/beta-access))
+- At least 1 wallet address you want to track (EVM or Solana)
+
+## 1. Unlock the app
+
+Open [useretina.xyz](https://useretina.xyz). Paste the password on the gate screen and submit. The app unlocks on this browser and device.
+
+## 2. Run the setup wizard
+
+The setup wizard is 5 steps. Only step 1 is required. The footer always shows a running summary like `2 positions · 7 wallets · $7,516 ready`.
+
+<Steps>
+  <Step title="EVM wallets (required)">
+    Paste 1 or more EVM addresses. Each row has a label, an address field, a **check** button, and a **Use for Polymarket** checkbox. Pressing **check** fetches positions live so you can confirm the address is the one you meant.
+
+    Tick **Use for Polymarket** on any EVM address that you also use for Polymarket. That tells Retina to read Polymarket markets for the same address without making you paste it again in step 3.
+  </Step>
+  <Step title="Solana addresses (optional)">
+    Paste Solana addresses. Same pattern: label, address, **check** button.
+  </Step>
+  <Step title="Polymarket (optional)">
+    Paste Polymarket wallet addresses. Use this step for Polymarket wallets that are not already covered by **Use for Polymarket** in step 1.
+  </Step>
+  <Step title="Manual positions (optional)">
+    Add anything Retina cannot detect from public chain data: CEX balances, niche chains, private vaults, cold wallets. Each manual position carries the same fields as an on-chain position. See [Position model](/concepts/position-model).
+  </Step>
+  <Step title="Metals (optional)">
+    Enter physical gold and silver holdings by weight. Live spot prices come from GoldApi.
+  </Step>
+</Steps>
+
+## 3. Create the first snapshot
+
+Click **Create Snapshot →** at the bottom of the wizard. Retina captures the full state (positions, prices, APYs, Polymarket state, metals) into `Snapshot #1` and loads the [Dashboard](/pages/dashboard).
+
+<Note>
+From here, every page reads from the active snapshot. To capture a new point in time, click **+ Snapshot** in the top-right.
+</Note>
+
+## Next
+
+<CardGroup cols={2}>
+  <Card title="Dashboard" icon="layout-dashboard" href="/pages/dashboard">
+    What the Dashboard shows for the active snapshot.
+  </Card>
+  <Card title="Snapshots" icon="camera" href="/concepts/snapshots">
+    The mental model behind the whole app.
+  </Card>
+</CardGroup>
