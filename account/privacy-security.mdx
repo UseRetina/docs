@@ -1,9 +1,9 @@
 ---
 title: "Accounts, privacy, and security"
-description: "How Retina separates sign-in from tracked addresses and handles browser, cloud, provider, and AI data."
+description: "How Retina separates sign-in, tracked addresses, payment wallets, and browser, cloud, provider, and AI data."
 ---
 
-Retina uses public addresses and read-only data. Tracking a portfolio does not give Retina permission to move funds, approve tokens, place orders, or sign transactions.
+Retina uses public addresses and read-only data for portfolio tracking. Tracking a portfolio does not give Retina permission to move funds, approve tokens, place orders, or sign transactions.
 
 ## Sign-in identity
 
@@ -12,6 +12,16 @@ You can sign in with email, Google, X, an EVM wallet, or a Solana wallet.
 Wallet sign-in uses an off-chain message that proves control of the address. The message cannot authorize a transaction or asset transfer.
 
 Your sign-in identity remains separate from the addresses you track. You can add public addresses you do not control, including cold wallets and vault addresses.
+
+## Payments are a separate action
+
+Paying for or cancelling a plan is separate from tracking and sign-in. Retina presents a wallet transaction only after you explicitly start payment or cancellation from the plan page. Your wallet shows the transaction for approval.
+
+Retina never receives a seed phrase or private key. For billing, Retina stores the public payer address, order, payment reference or transaction identifier, paid-through date, and account entitlement needed to prove and manage access.
+
+Onchain payments are public. A routing service can also see the payment request it processes. The payment wallet does not become a tracked portfolio address unless you add it separately.
+
+An automatic EVM subscription uses a USDC allowance for its specific membership contract. Cancelling asks the wallet to remove that allowance. It does not grant Retina general wallet permissions.
 
 ## Browser and account copies
 
@@ -41,7 +51,7 @@ Choose the mode that matches the question and your privacy preference.
 
 ## Account deletion
 
-Deleting your Retina account revokes access immediately and schedules deletion of saved account data. Data stored only in the current browser remains until you clear or replace it.
+Deleting your Retina account revokes access immediately and schedules deletion of saved account data, including its billing records where deletion is permitted. Data stored only in the current browser remains until you clear or replace it.
 
 Download a full backup first when you want a recoverable copy.
 
