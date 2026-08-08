@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
   "name": "Retina docs",
-  "description": "Documentation for Retina, a local-first portfolio tracker for crypto and adjacent assets.",
+  "description": "User documentation for Retina portfolio tracking, snapshots, cloud history, automation, and portfolio analysis.",
   "colors": {
     "primary": "#4648D4",
     "light": "#8B8DF0",
@@ -15,8 +15,11 @@
   "styling": {
     "eyebrows": "breadcrumbs"
   },
+  "metadata": {
+    "timestamp": true
+  },
   "contextual": {
-    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+    "options": ["copy", "view", "assistant"]
   },
   "navigation": {
     "groups": [
@@ -26,86 +29,78 @@
         "expanded": true,
         "pages": [
           "getting-started/introduction",
-          "getting-started/beta-access",
-          "getting-started/quickstart"
+          "getting-started/quickstart",
+          "getting-started/add-what-you-track"
         ]
       },
       {
-        "group": "Pages",
-        "icon": "layout",
+        "group": "Core workflows",
+        "icon": "repeat-2",
         "expanded": true,
         "pages": [
-          "pages/dashboard",
-          "pages/polymarket",
-          "pages/wallets",
-          "pages/protocols",
-          "pages/maturity-ladder",
-          "pages/positions",
-          "pages/risk-scores",
-          "pages/rewards",
-          "pages/history"
+          "core/snapshots",
+          "core/history-performance",
+          "core/cloud-automatic-updates"
         ]
       },
       {
-        "group": "Concepts",
-        "icon": "lightbulb",
+        "group": "Explore your portfolio",
+        "icon": "layout-dashboard",
+        "expanded": true,
         "pages": [
-          "concepts/snapshots",
-          "concepts/tracker-vs-viewer",
-          "concepts/asset-classes",
-          "concepts/position-types",
-          "concepts/maturity",
-          "concepts/position-model"
+          "guides/dashboard",
+          "guides/holdings",
+          "guides/yield-maturities",
+          "guides/polymarket",
+          "guides/rewards-risk",
+          "guides/ask-retina"
         ]
       },
       {
-        "group": "Data sources",
-        "icon": "database",
+        "group": "Account and data",
+        "icon": "shield-check",
+        "expanded": true,
         "pages": [
-          "data-sources/overview",
-          "data-sources/prices",
-          "data-sources/evm",
-          "data-sources/solana",
-          "data-sources/perps-staking",
-          "data-sources/prediction-markets",
-          "data-sources/yield",
-          "data-sources/risk-scoring",
-          "data-sources/airdrops-rewards"
-        ]
-      },
-      {
-        "group": "Privacy and architecture",
-        "icon": "shield",
-        "pages": [
-          "privacy/local-first",
-          "privacy/why-it-matters",
-          "privacy/tradeoffs",
-          "privacy/sync-roadmap"
-        ]
-      },
-      {
-        "group": "Roadmap",
-        "icon": "map",
-        "pages": [
-          "roadmap"
+          "account/privacy-security",
+          "account/backup-restore-export",
+          "account/coverage-troubleshooting",
+          "account/pricing"
         ]
       }
     ]
   },
+  "redirects": [
+    { "source": "/getting-started/beta-access", "destination": "/getting-started/quickstart" },
+    { "source": "/pages/dashboard", "destination": "/guides/dashboard" },
+    { "source": "/pages/polymarket", "destination": "/guides/polymarket" },
+    { "source": "/pages/wallets", "destination": "/guides/holdings" },
+    { "source": "/pages/protocols", "destination": "/guides/holdings" },
+    { "source": "/pages/positions", "destination": "/guides/holdings" },
+    { "source": "/pages/maturity-ladder", "destination": "/guides/yield-maturities" },
+    { "source": "/pages/risk-scores", "destination": "/guides/rewards-risk" },
+    { "source": "/pages/rewards", "destination": "/guides/rewards-risk" },
+    { "source": "/pages/history", "destination": "/core/history-performance" },
+    { "source": "/concepts/snapshots", "destination": "/core/snapshots" },
+    { "source": "/concepts/tracker-vs-viewer", "destination": "/getting-started/introduction" },
+    { "source": "/concepts/asset-classes", "destination": "/guides/holdings" },
+    { "source": "/concepts/position-types", "destination": "/guides/holdings" },
+    { "source": "/concepts/position-model", "destination": "/guides/holdings" },
+    { "source": "/concepts/maturity", "destination": "/guides/yield-maturities" },
+    { "source": "/data-sources/:slug*", "destination": "/account/coverage-troubleshooting" },
+    { "source": "/privacy/local-first", "destination": "/account/privacy-security" },
+    { "source": "/privacy/why-it-matters", "destination": "/account/privacy-security" },
+    { "source": "/privacy/tradeoffs", "destination": "/account/privacy-security" },
+    { "source": "/privacy/sync-roadmap", "destination": "/core/cloud-automatic-updates" },
+    { "source": "/roadmap", "destination": "/getting-started/introduction" }
+  ],
   "logo": {
     "light": "/logo/retina-lockup-on-light.svg",
     "dark": "/logo/retina-lockup-on-dark.svg"
   },
   "navbar": {
     "links": [
-      {
-        "label": "useretina.xyz",
-        "href": "https://useretina.xyz"
-      },
-      {
-        "label": "X",
-        "href": "https://x.com/UseRetina"
-      }
+      { "label": "Open Retina", "href": "https://useretina.xyz" },
+      { "label": "X", "href": "https://x.com/UseRetina" }
     ]
   },
   "footer": {

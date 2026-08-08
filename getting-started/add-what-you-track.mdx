@@ -1,0 +1,50 @@
+---
+title: "Add and edit what you track"
+description: "Add public wallet addresses, Polymarket accounts, manual positions, and physical metals to Retina."
+---
+
+Retina needs at least 1 portfolio source before it can create a snapshot. You can combine any of the source types below.
+
+## EVM wallets
+
+Add an address, give it a useful label, and select **Check**. Retina reads public balances and supported DeFi positions across EVM networks.
+
+Use bulk paste when you have several addresses. You can also mark an EVM address for Polymarket tracking.
+
+## Solana wallets
+
+Add and label 1 or more public Solana addresses. Retina combines wallet balances with supported protocol positions and removes duplicate representations where providers overlap.
+
+## Polymarket wallets
+
+Add the address used by your Polymarket account. Retina uses public Polymarket data to show cash, open positions, closed positions, activity, odds, and profit or loss where available.
+
+## Manual positions
+
+Use a manual position for anything public APIs cannot detect, such as:
+
+- A CEX balance
+- A private vault
+- A niche chain
+- A cold holding without supported position data
+- Cash or another off-chain asset
+
+Enter a fixed USD value or a token amount that Retina can price. Add the protocol, wallet label, asset class, APY, maturity, and liquidity details when they help your analysis.
+
+## Physical metals
+
+Enter gold or silver by weight. Retina applies current spot pricing when it creates the snapshot.
+
+## Sign-in wallets and tracked wallets
+
+An EVM or Solana wallet used for sign-in proves account ownership through a message signature. It is not automatically the only address you can track. You may track any public address, including a different wallet or a cold wallet.
+
+## Editing later
+
+Select **+ Snapshot**, then choose the option to edit sources. Your saved setup opens before the next capture. Changes affect the new snapshot and do not rewrite older snapshots.
+
+<Note>
+Provider coverage changes over time. A successful address check confirms that the address is valid. Review the resulting positions before relying on the total.
+</Note>
+
+Last verified: 8 August 2026.

@@ -1,0 +1,60 @@
+---
+title: "Coverage, freshness, and troubleshooting"
+description: "Understand what Retina reads, when values refresh, and what to check when a position or snapshot looks wrong."
+---
+
+Retina combines several public data sources because no single provider covers every wallet, chain, protocol, and position type.
+
+## Coverage by portfolio area
+
+| Area | Current sources include |
+| --- | --- |
+| EVM wallets and DeFi | Zerion and protocol-specific enrichment |
+| Solana wallets and DeFi | Helius, Jupiter, TopLedger, Vybe, and Moralis |
+| Hyperliquid | Hyperliquid public APIs |
+| Polymarket | Polymarket public APIs |
+| Yield and maturity | Protocol data, Pendle, and DeFiLlama |
+| Prices | CoinGecko, token-market sources, and metals pricing providers |
+| Rewards | DropsBot, Merkl, Pendle, and supported protocol sources |
+| Risk | Diapleo |
+
+Provider use and fallback order can change as coverage improves.
+
+## Saved and live values
+
+- Snapshot totals use values saved during capture.
+- Older snapshots remain frozen.
+- The latest Polymarket view can refresh public market data.
+- Yield data and watchlist prices can refresh separately.
+- Activity is fetched and reconciled around tracked wallets and snapshot intervals.
+
+Check the page label, source field, and freshness message before comparing values.
+
+## A position is missing
+
+1. Confirm the correct public address is tracked.
+2. Run the address check from setup.
+3. Create or retry the snapshot when the provider is available.
+4. Review exclusions and hidden dust.
+5. Add a manual position when the holding is private or unsupported.
+
+## A value changed unexpectedly
+
+Open **What Changed** and review wallet activity. For an automatic candidate, open **My Account** and retry the affected wallet.
+
+Provider errors, token repricing, protocol migrations, missing supplementary data, and real transfers can all change a result. Retina keeps blocking candidates out of saved history until you review them.
+
+## APY or maturity is missing
+
+Open the position details to see the available source. Add a manual APY or maturity when you have a reliable value that Retina cannot detect.
+
+## Sign-in or restore is blocked
+
+- Confirm you chose a sign-in method linked to the same account.
+- Complete the security check on the sign-in page.
+- Use the conflict prompt instead of clearing browser storage.
+- Download a backup before replacing a browser portfolio.
+
+Use the **Help** button in Retina when the issue continues. Include the page, wallet family, and visible error. Never send a seed phrase or private key.
+
+Last verified: 8 August 2026.

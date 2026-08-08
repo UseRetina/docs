@@ -1,0 +1,46 @@
+---
+title: "Ask Retina"
+description: "Ask portfolio questions with deterministic calculations and optional local or cloud AI interpretation."
+---
+
+Ask Retina answers questions about the selected snapshot and supported public market data.
+
+Retina calculates portfolio values with deterministic local tools. An AI mode can interpret flexible wording and choose a validated calculation plan. The model does not invent the portfolio totals.
+
+## What you can ask
+
+Examples include:
+
+- How much ETH exposure do I have?
+- Which wallet has the most stablecoins?
+- What matures in the next 30 days?
+- What changed since the previous snapshot?
+- Which protocols are my largest exposures?
+- Which positions have the lowest APY?
+- How much is liquid today?
+- What Polymarket positions are open?
+- Which data quality issues should I review?
+
+Follow-up questions can use the current conversation context. Chat history stays in memory and disappears when you reload the page.
+
+## Choose a mode
+
+<Tabs>
+  <Tab title="Private mode">
+    Uses deterministic tools in your browser. No inference service receives portfolio facts. Retina may still fetch public protocol or yield information when your question asks for it.
+  </Tab>
+  <Tab title="Local AI">
+    Improves interpretation and wording with a model that runs on your device. Availability depends on browser support and device capacity. The first use may require a model download.
+  </Tab>
+  <Tab title="Cloud AI">
+    Uses Gemini for harder wording. Retina sends the question and a compact set of relevant portfolio facts. A daily quota applies and the mode is optional.
+  </Tab>
+</Tabs>
+
+## Limits
+
+Ask Retina answers from the selected snapshot unless the answer explicitly uses live public data. It does not execute transactions, provide guaranteed forecasts, or replace independent financial and security review.
+
+Microphone dictation is available where the browser supports it. Ask Retina is unavailable in the public one-address preview.
+
+Last verified: 8 August 2026.

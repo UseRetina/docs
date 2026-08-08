@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "productRepository": "UseRetina/Retina",
+  "pages": {
+    "getting-started/introduction": ["index.html", "gate.html", "setup.html", "snapshot-engine.js", "retina-cloud.js"],
+    "getting-started/quickstart": ["gate.html", "retina-auth.js", "setup.html", "retina-cloud.js"],
+    "getting-started/add-what-you-track": ["setup.html", "snapshot-engine.js"],
+    "core/snapshots": ["setup.html", "dashboard.html", "snapshot-engine.js", "retina-cloud.js", "functions/_shared/cloud-api.js"],
+    "core/history-performance": ["dashboard.html", "retina-activity.js", "retina-cloud.js"],
+    "core/cloud-automatic-updates": ["retina-cloud.js", "functions/_shared/cloud-api.js", "functions/_shared/scheduler.js", "functions/_shared/snapshot-runner.js", "functions/_shared/notifications.js"],
+    "guides/dashboard": ["dashboard.html", "retina-activity.js"],
+    "guides/holdings": ["dashboard.html", "setup.html", "snapshot-engine.js"],
+    "guides/yield-maturities": ["dashboard.html", "snapshot-engine.js"],
+    "guides/polymarket": ["dashboard.html", "snapshot-engine.js", "functions/_shared/snapshot-runner.js"],
+    "guides/rewards-risk": ["dashboard.html", "snapshot-engine.js"],
+    "guides/ask-retina": ["retina-ai.js", "retina-ai-query.js", "retina-ai-worker.js", "retina-ai-cpu-worker.js", "functions/api/[[path]].js"],
+    "account/privacy-security": ["gate.html", "retina-auth.js", "retina-cloud.js", "privacy.html", "docs/CLOUD_DATA_CONTRACT.md", "functions/_shared/cloud-crypto.js"],
+    "account/backup-restore-export": ["dashboard.html", "retina-cloud.js", "setup.html"],
+    "account/coverage-troubleshooting": ["snapshot-engine.js", "dashboard.html", "functions/api/[[path]].js"],
+    "account/pricing": ["gate.html", "retina-cloud.js", "functions/_shared/external-auth.js", "functions/_shared/snapshot-runner.js"]
+  }
+}

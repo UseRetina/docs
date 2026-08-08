@@ -1,0 +1,60 @@
+---
+title: "Snapshots"
+description: "Create, review, select, rename, and compare point-in-time copies of your Retina portfolio."
+---
+
+A snapshot is a saved view of your portfolio at a specific time. It is the main unit of history in Retina.
+
+## What a snapshot contains
+
+A snapshot can include:
+
+- Positions from EVM and Solana wallets
+- Hyperliquid positions associated with tracked addresses
+- Polymarket balances and positions
+- Manual positions and metals
+- Prices, APYs, maturities, liquidity, and position classifications
+- The tracked source configuration used for that capture
+
+Older snapshots keep the values recorded at capture time. They do not change when prices or provider data change later.
+
+## Create a snapshot
+
+Select **+ Snapshot** from the app header.
+
+- Use the quick capture to reuse saved sources.
+- Edit sources when you want to add, remove, or relabel something first.
+
+Retina checks snapshot access and account limits before starting. The app shows your current daily allowance and the next available capture time when a cooldown applies.
+
+## Review before saving
+
+Retina checks whether required sources returned complete results and whether large changes can be explained.
+
+For a manual capture, you may be asked to:
+
+- Refresh an affected wallet
+- Exclude an incorrect asset and recalculate
+- Continue when you recognize the result as correct
+
+Automatic captures use the same principle. A blocking finding becomes a candidate for review instead of entering history. An advisory finding can be saved with a visible flag.
+
+## Select and manage snapshots
+
+Use the snapshot selector at the top of the sidebar to change the active snapshot. Most app views follow that selection.
+
+From snapshot management you can:
+
+- Open a snapshot
+- Rename it
+- Delete it
+- Export portfolio data
+- Compare it with earlier snapshots in History
+
+Deleting a synced snapshot also updates the account copy after the deletion is confirmed.
+
+## Live data inside snapshot views
+
+Most totals come from the active snapshot. Some surfaces deliberately fetch newer public information, especially current Polymarket data and yield information. Retina labels these states so you can tell saved values from refreshed values.
+
+Last verified: 8 August 2026.
