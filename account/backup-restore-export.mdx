@@ -1,0 +1,55 @@
+---
+title: "Backup, restore, export, and deletion"
+description: "Move Retina history between devices, create offline backups, export tables, and remove saved data."
+---
+
+Retina provides account restore for normal multi-device use and file exports for independent recovery or analysis.
+
+## Restore after signing in
+
+On a browser without an existing Retina portfolio, sign in to the same account. Retina restores the saved portfolio automatically.
+
+If the browser already contains a portfolio that belongs to the account, Retina compares browser and cloud history before continuing.
+
+If the histories differ, Retina asks you to choose. Available actions can include:
+
+- Keep the browser data
+- Download a backup first
+- Replace the browser with the account's saved data
+
+Retina does not silently overwrite divergent histories.
+
+## Export a full backup
+
+Use the app export menu and choose the full JSON backup. This contains the information needed for a later Retina import.
+
+Store the file somewhere you control. Portfolio backups contain sensitive financial information.
+
+## Other exports
+
+- Export tracked addresses as a text file.
+- Export the filtered Positions table as CSV.
+- Use JSON when you need restoration.
+- Use CSV when you need spreadsheet analysis.
+
+## Import
+
+Choose the import action and select a Retina JSON backup. Review the portfolio before replacing existing browser data.
+
+Import does not make an arbitrary spreadsheet or wallet export compatible with Retina. Use manual positions for unsupported holdings.
+
+## Delete a snapshot
+
+Open snapshot management or the History ledger, then choose **Delete** for the snapshot. A linked cloud portfolio is updated after confirmation.
+
+## Delete your account
+
+Open **My Account**, choose **Delete account**, and complete the confirmation countdown.
+
+This removes the account, saved cloud portfolio, schedules, and notification settings. Browser-only data remains on the current device.
+
+<Warning>
+Clear browser storage only after confirming that the account restore or an exported backup contains the history you want to keep.
+</Warning>
+
+Last verified: 8 August 2026.

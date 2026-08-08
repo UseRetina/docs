@@ -1,58 +1,59 @@
 ---
 title: "Quickstart"
-description: "Step-by-step setup wizard for first-time Retina users: unlock the app, add EVM and Solana wallets, Polymarket, manual positions, metals, then snapshot."
+description: "Sign in, add at least 1 portfolio source, and create your first Retina snapshot."
 ---
 
-This is the first-time flow, end to end. You only see the setup wizard the first time. After that, you land on the Dashboard.
-
-## Prerequisites
-
-- A password (see [Beta access](/getting-started/beta-access))
-- At least 1 wallet address you want to track (EVM or Solana)
-
-## 1. Unlock the app
-
-Open [useretina.xyz](https://useretina.xyz). Paste the password on the gate screen and submit. The app unlocks on this browser and device.
-
-## 2. Run the setup wizard
-
-The setup wizard is 5 steps. Only step 1 is required. The footer always shows a running summary like `2 positions · 7 wallets · $7,516 ready`.
+You can go from sign-in to a complete first snapshot in a few minutes.
 
 <Steps>
-  <Step title="EVM wallets (required)">
-    Paste 1 or more EVM addresses. Each row has a label, an address field, a **check** button, and a **Use for Polymarket** checkbox. Pressing **check** fetches positions live so you can confirm the address is the one you meant.
+  <Step title="Sign in">
+    Open [useretina.xyz](https://useretina.xyz) and choose email, Google, X, an EVM wallet, or a Solana wallet.
 
-    Tick **Use for Polymarket** on any EVM address that you also use for Polymarket. That tells Retina to read Polymarket markets for the same address without making you paste it again in step 3.
+    Wallet sign-in asks you to sign a plain login message. It cannot move assets or approve transactions.
+
+    Retina is in closed beta. A new account may be asked for a beta invite code after sign-in.
   </Step>
-  <Step title="Solana addresses (optional)">
-    Paste Solana addresses. Same pattern: label, address, **check** button.
+  <Step title="Add what you track">
+    Add at least 1 source. Every section is optional, so use the combination that matches your portfolio:
+
+    - EVM wallets
+    - Solana wallets
+    - Polymarket wallets
+    - Manual positions
+    - Physical gold or silver
+
+    You can label wallet addresses, check them before capture, and paste several addresses at once. See [Add and edit what you track](/getting-started/add-what-you-track).
   </Step>
-  <Step title="Polymarket (optional)">
-    Paste Polymarket wallet addresses. Use this step for Polymarket wallets that are not already covered by **Use for Polymarket** in step 1.
+  <Step title="Choose performance settings">
+    The optional **Performance** section controls how Retina explains changes between snapshots.
+
+    Choose whether the headline emphasizes raw portfolio value or investment performance. You can also choose time-weighted or money-weighted return handling, how rewards and gas are classified, and whether the dashboard shows a liquid-versus-locked split.
   </Step>
-  <Step title="Manual positions (optional)">
-    Add anything Retina cannot detect from public chain data: CEX balances, niche chains, private vaults, cold wallets. Each manual position carries the same fields as an on-chain position. See [Position model](/concepts/position-model).
+  <Step title="Create the snapshot">
+    Select **Create Snapshot**. Retina reads the selected sources, normalizes the positions, and checks the result before saving.
+
+    If a provider result looks incomplete or a value changes unexpectedly, Retina shows a review step. You can refresh the affected wallet, exclude an incorrect asset, or keep the result when you know it is correct.
   </Step>
-  <Step title="Metals (optional)">
-    Enter physical gold and silver holdings by weight. Live spot prices come from GoldApi.
+  <Step title="Open the dashboard">
+    Your snapshot is saved in the browser and synced to your signed-in account. The dashboard opens with the new snapshot selected.
+
+    Sign in on another browser or device to restore the account's saved portfolio. Scheduled snapshots remain off until you enable them in **My Account**.
   </Step>
 </Steps>
 
-## 3. Create the first snapshot
+## Your next snapshot
 
-Click **Create Snapshot →** at the bottom of the wizard. Retina captures the full state (positions, prices, APYs, Polymarket state, metals) into `Snapshot #1` and loads the [Dashboard](/pages/dashboard).
+Use **+ Snapshot** in the app header. Choose the quick option to reuse your saved sources, or edit the sources before capturing.
 
-<Note>
-From here, every page reads from the active snapshot. To capture a new point in time, click **+ Snapshot** in the top-right.
-</Note>
-
-## Next
+After the snapshot is saved, open **What Changed** to review deposits, withdrawals, market movement, rewards, and anything Retina could not classify confidently.
 
 <CardGroup cols={2}>
-  <Card title="Dashboard" icon="layout-dashboard" href="/pages/dashboard">
-    What the Dashboard shows for the active snapshot.
+  <Card title="Snapshots" icon="camera" href="/core/snapshots">
+    Learn how capture, review, selection, and limits work.
   </Card>
-  <Card title="Snapshots" icon="camera" href="/concepts/snapshots">
-    The mental model behind the whole app.
+  <Card title="Cloud and automatic updates" icon="cloud" href="/core/cloud-automatic-updates">
+    Manage account sync, schedules, and notifications.
   </Card>
 </CardGroup>
+
+Last verified: 8 August 2026.

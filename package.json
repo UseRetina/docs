@@ -1,0 +1,7 @@
+{
+  "name": "retina-user-docs",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/docs-checks.mjs"
+  }
+}

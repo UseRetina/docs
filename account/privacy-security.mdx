@@ -1,0 +1,48 @@
+---
+title: "Accounts, privacy, and security"
+description: "How Retina separates sign-in from tracked addresses and handles browser, cloud, provider, and AI data."
+---
+
+Retina uses public addresses and read-only data. Tracking a portfolio does not give Retina permission to move funds, approve tokens, place orders, or sign transactions.
+
+## Sign-in identity
+
+You can sign in with email, Google, X, an EVM wallet, or a Solana wallet.
+
+Wallet sign-in uses an off-chain message that proves control of the address. The message cannot authorize a transaction or asset transfer.
+
+Your sign-in identity remains separate from the addresses you track. You can add public addresses you do not control, including cold wallets and vault addresses.
+
+## Browser and account copies
+
+Retina keeps the active working copy in browser storage. A signed-in portfolio is also saved to the account so snapshots can sync and restore on another browser or device.
+
+The browser copy supports fast local use. The account copy supports recovery, multi-device access, scheduled captures, and notifications.
+
+## Cloud encryption
+
+Saved portfolio objects are encrypted before they are written to private cloud object storage. Object names use opaque identifiers instead of wallet addresses.
+
+This is server-side application encryption. It is not end-to-end encryption. Retina's Worker can decrypt the saved settings and portfolio data because automatic snapshots must run while your browser is closed.
+
+## Data providers
+
+Retina sends the public address and request details needed to retrieve balances, positions, prices, yields, rewards, risk data, and market information. Providers can see requests made to their services.
+
+Retina uses a server proxy for providers that require protected credentials or server-side coordination. The portfolio is normalized into a combined view after those results return.
+
+## Ask Retina
+
+- Private mode calculates from the selected snapshot in your browser.
+- Local AI runs the interpretation model on your device where supported.
+- Cloud AI sends your question and a compact set of relevant facts to Gemini.
+
+Choose the mode that matches the question and your privacy preference.
+
+## Account deletion
+
+Deleting your Retina account revokes access immediately and schedules deletion of saved account data. Data stored only in the current browser remains until you clear or replace it.
+
+Download a full backup first when you want a recoverable copy.
+
+Last verified: 8 August 2026.

@@ -1,0 +1,47 @@
+---
+title: "Wallets, positions, and protocols"
+description: "Move from a portfolio total to the wallet, position, token, and protocol that explains it."
+---
+
+These 3 views answer different levels of the same question: what do I own, where is it, and how is it structured?
+
+## Wallets
+
+The Wallets view groups value across EVM, Solana, and Hyperliquid sources. Each wallet row shows its label, address, networks, position count, value, and portfolio weight.
+
+Open a wallet to inspect:
+
+- Its positions and spot holdings
+- Exposure by protocol, chain, and asset
+- Wallet value history
+- Relevant wallet activity
+
+The spot holdings section combines matching tokens across wallets. Open a token to inspect its holders and position details.
+
+## Positions
+
+The Positions view is the most detailed portfolio table. It contains detected and manual positions from the current snapshot, with an option to include earlier snapshots.
+
+Filter by wallet, chain, protocol, asset, position type, or source. Search token names, protocols, and notes. You can hide dust and export the filtered result as CSV.
+
+Select a row to inspect available fields such as amount, value, protocol, maturity, APY, liquidity, wallet identity, and source.
+
+Use **+ Add position** for a manual holding. Editing a manual position affects the current working portfolio and future snapshots. Saved older snapshots remain unchanged.
+
+## Protocols
+
+The Protocols view groups the active snapshot by protocol. Each card summarizes value, position count, asset exposure, APY, and estimated daily income where available.
+
+Use the filters and sorting controls to find the largest protocol exposures or compare yield-bearing groups.
+
+## Export options
+
+The export menu can produce:
+
+- A text file of tracked addresses
+- A full Retina backup in JSON
+- A filtered positions CSV from the Positions view
+
+Use the full JSON backup when you need a restorable copy. CSV is intended for analysis outside Retina.
+
+Last verified: 8 August 2026.
