@@ -46,6 +46,9 @@ If a product change has no documentation impact, record `Docs-Impact: none - <re
 - Use bold text for interface labels.
 - Use numerals for numbers.
 - Do not use em dashes, including HTML entities.
+- Avoid stock contrast constructions such as "X, not Y", "not this, but that",
+  and "it is not...". State the benefit directly unless the contrast is
+  essential to prevent a security or safety misunderstanding.
 - Do not add screenshots, photos, videos, GIFs, or other product imagery to documentation pages.
 - Do not add roadmap promises to the user manual.
 - Do not expose keys, internal endpoints, proxy details, deployment internals, or security bypass information.
