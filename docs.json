@@ -99,8 +99,7 @@
   },
   "navbar": {
     "links": [
-      { "label": "Open Retina", "href": "https://useretina.xyz" },
-      { "label": "X", "href": "https://x.com/UseRetina" }
+      { "label": "Open Retina", "href": "https://useretina.xyz" }
     ]
   },
   "footer": {
