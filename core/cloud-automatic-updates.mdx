@@ -1,11 +1,11 @@
 ---
 title: "Cloud history and automatic updates"
-description: "Understand account sync, multi-device restore, scheduled snapshots, notifications, and review in Retina."
+description: "Understand account sync, multi-device restore, automatic snapshots, notifications, and review in Retina."
 ---
 
 Retina keeps a browser working copy and a cloud account copy of a signed-in portfolio. New snapshots sync to the account so your history can be restored elsewhere.
 
-Scheduled portfolio updates are optional. Cloud history does not require you to turn on a schedule.
+Automatic portfolio updates are optional. Cloud history does not require you to turn on a schedule.
 
 ## Use Retina on another device
 
@@ -45,18 +45,28 @@ Retina does not add a partial automatic result to history.
 
 - A blocking finding waits for your review.
 - An advisory finding is saved with its reason attached.
-- Later scheduled updates can continue while an older candidate remains available for review.
+- Later automatic updates can continue while an older candidate remains available for review.
 
 Open **My Account** when Retina reports that an update needs a quick check. You can retry the affected wallets, skip the candidate, or keep it when you know the values are correct.
 
 ## Snapshot allowances
 
-Your account panel shows the current total address, daily capture, and retained-history limits. The total address limit applies across EVM, Solana, and Polymarket sources together. Unused automatic capacity may become available for a manual capture. A minimum interval can still apply between captures.
+The account panel shows your total address, daily capture, and retained-history limits.
 
-The payment foundation stores Focus, Range, and Horizon entitlements, but paid-plan enforcement remains off until the paid launch is activated. Until then, use the limits shown in **My Account**. See [Plans and pricing](/account/pricing).
+| Plan | Total addresses | Automatic snapshots per day | Manual allowance per day | Retained snapshots |
+| --- | ---: | ---: | ---: | ---: |
+| Focus | 1 | 1 | 1 | 5,000 |
+| Range | 5 | 2 | 1 | 5,000 |
+| Horizon | 50 | 2 | 1 | 5,000 |
+
+The address limit applies across EVM, Solana, and Polymarket sources together. An automatic slot can become available for manual use when no automatic run can still use it that day. Retina keeps successful captures at least 1 hour apart.
+
+Interactive wallet checks and automatic captures share a separate account data allowance. Retina applies it on the server before contacting a portfolio provider. A failed or interrupted pass has recovery headroom, while repeated checks cannot run without limit. The visible error states when this daily data allowance has been used.
+
+See [Plans and pricing](/account/pricing).
 
 ## If sync is interrupted
 
 Retina keeps the last durable browser copy. Open **My Account** to retry backup or resolve a version conflict. Download a full backup before choosing a replacement when you want an extra recovery copy.
 
-Last verified: 8 August 2026.
+Last verified: 9 August 2026.
