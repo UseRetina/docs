@@ -48,9 +48,13 @@ Provider errors, token repricing, protocol migrations, missing supplementary dat
 
 "Retrying shortly" means Retina is pacing calls before they reach the provider. Leave the page open while the automatic retry runs.
 
+A **partial** row means Retina loaded usable wallet data but one or more supplementary provider reads did not finish. The row action changes to **Retry**. During a bulk check, Retina queues that retry behind the current wallet in the same network family.
+
+"TopLedger timed out" means a required Solana verification exceeded Retina's 45-second reliability window. Retina queues one retry instead of saving an incomplete result. An "offline" status is reserved for a provider request that failed rather than merely responding slowly.
+
 "Today's data allowance for this account is used" means the signed-in account reached its plan's provider safety ceiling. The allowance covers setup, automatic captures, and recovery attempts, and resets at midnight UTC. Repeated address checks consume it even when no snapshot is saved.
 
-An "offline" status is reserved for a provider request that actually failed. Retry later, or remove that wallet only when you intentionally want a snapshot without it.
+If a provider remains unavailable after the retry, try later. Remove that wallet only when you intentionally want a snapshot without it.
 
 ## APY or maturity is missing
 
