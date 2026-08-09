@@ -44,6 +44,14 @@ Open **What Changed** and review wallet activity. For an automatic candidate, op
 
 Provider errors, token repricing, protocol migrations, missing supplementary data, and real transfers can all change a result. Retina keeps blocking candidates out of saved history until you review them.
 
+## A provider check is delayed or stopped
+
+"Retrying shortly" means Retina is pacing calls before they reach the provider. Leave the page open while the automatic retry runs.
+
+"Today's data allowance for this account is used" means the signed-in account reached its plan's provider safety ceiling. The allowance covers setup, automatic captures, and recovery attempts, and resets at midnight UTC. Repeated address checks consume it even when no snapshot is saved.
+
+An "offline" status is reserved for a provider request that actually failed. Retry later, or remove that wallet only when you intentionally want a snapshot without it.
+
 ## APY or maturity is missing
 
 Open the position details to see the available source. Add a manual APY or maturity when you have a reliable value that Retina cannot detect.
@@ -57,4 +65,4 @@ Open the position details to see the available source. Add a manual APY or matur
 
 Use the **Help** button in Retina when the issue continues. Include the page, wallet family, and visible error. Never send a seed phrase or private key.
 
-Last verified: 8 August 2026.
+Last verified: 9 August 2026.
