@@ -27,7 +27,7 @@ An automatic EVM subscription uses a USDC allowance for its specific membership 
 
 Retina keeps the active working copy in browser storage. A signed-in portfolio is also saved to the account so snapshots can sync and restore on another browser or device.
 
-The browser copy supports fast local use. The account copy supports recovery, multi-device access, scheduled captures, and notifications.
+The browser copy supports fast local use. The account copy supports recovery, multi-device access, automatic captures, and notifications.
 
 ## Cloud encryption
 
@@ -39,7 +39,9 @@ This is server-side application encryption. It is not end-to-end encryption. Ret
 
 Retina sends the public address and request details needed to retrieve balances, positions, prices, yields, rewards, risk data, and market information. Providers can see requests made to their services.
 
-Retina uses a server proxy for providers that require protected credentials or server-side coordination. The portfolio is normalized into a combined view after those results return.
+Retina uses a server proxy for providers that require protected credentials or server-side coordination. Portfolio provider routes require a signed-in account. Before a provider call leaves Retina, the Worker reads the account's plan from D1 and atomically applies its daily data allowance. The browser cannot choose or raise that allowance.
+
+The public one-address preview uses a separate Turnstile check, short-lived cache, and global capacity limits. The portfolio is normalized into a combined view after provider results return.
 
 ## Ask Retina
 
@@ -57,4 +59,4 @@ Deleting your Retina account revokes access immediately and schedules deletion o
 
 Download a full backup first when you want a recoverable copy.
 
-Last verified: 8 August 2026.
+Last verified: 9 August 2026.
