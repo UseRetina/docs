@@ -7,9 +7,9 @@ Retina needs at least 1 portfolio source before it can create a snapshot. You ca
 
 ## EVM wallets
 
-Add an address, give it a useful label, and select **Check**. Retina reads public balances and supported DeFi positions across EVM networks.
+Add an address, give it a useful label, and select **Check**. Retina reads public balances and supported DeFi positions across EVM networks. A failed or partial result changes the action to **Retry**.
 
-Use bulk paste when you have several addresses. You can also mark an EVM address for Polymarket tracking.
+Use bulk paste when you have several addresses. Retina checks each wallet family in order. A retry waits behind the EVM or Solana check already in progress so the provider requests do not overlap. You can also mark an EVM address for Polymarket tracking.
 
 ## Solana wallets
 
@@ -47,4 +47,4 @@ Select **+ Snapshot**, then choose the option to edit sources. Your saved setup 
 Provider coverage changes over time. A successful address check confirms that the address is valid. Review the resulting positions before relying on the total.
 </Note>
 
-Last verified: 8 August 2026.
+Last verified: 9 August 2026.
