@@ -5,9 +5,9 @@
     "getting-started/introduction": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
     "getting-started/quickstart": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
     "getting-started/add-what-you-track": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
-    "core/snapshots": { "verifiedAt": "2026-08-14", "verifiedAgainst": "12257fa641fb6bb32e89c8c63ac34608d9414481" },
+    "core/snapshots": { "verifiedAt": "2026-08-14", "verifiedAgainst": "46dfa25f6e16908fd54942e26bac9957ba5573ef" },
     "core/history-performance": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
-    "core/cloud-automatic-updates": { "verifiedAt": "2026-08-14", "verifiedAgainst": "12257fa641fb6bb32e89c8c63ac34608d9414481" },
+    "core/cloud-automatic-updates": { "verifiedAt": "2026-08-14", "verifiedAgainst": "46dfa25f6e16908fd54942e26bac9957ba5573ef" },
     "guides/dashboard": { "verifiedAt": "2026-08-14", "verifiedAgainst": "12257fa641fb6bb32e89c8c63ac34608d9414481" },
     "guides/holdings": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
     "guides/yield-maturities": { "verifiedAt": "2026-08-14", "verifiedAgainst": "12257fa641fb6bb32e89c8c63ac34608d9414481" },
@@ -16,7 +16,7 @@
     "guides/ask-retina": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
     "account/privacy-security": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
     "account/backup-restore-export": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
-    "account/coverage-troubleshooting": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
+    "account/coverage-troubleshooting": { "verifiedAt": "2026-08-14", "verifiedAgainst": "46dfa25f6e16908fd54942e26bac9957ba5573ef" },
     "account/pricing": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" }
   }
 }

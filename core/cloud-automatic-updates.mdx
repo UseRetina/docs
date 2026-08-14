@@ -51,7 +51,13 @@ Retina does not add a partial automatic result to history. It rechecks temporary
 - An advisory finding is saved with its reason attached.
 - Later automatic updates can continue while an older candidate remains available for review.
 
-Open **Updates** when Retina reports that an update needs a quick check. You can retry the affected wallets, skip the candidate, or keep it when you know the values are correct.
+Open **Updates** when Retina reports that a snapshot needs review. Review each listed balance, recheck selected wallets, save the snapshot when the values are correct, or discard the unsaved snapshot.
+
+The review shows the previous and proposed snapshot totals, then identifies each balance that caused the pause. A token can include its contract address. A protocol summary is labelled with its protocol because it may not represent a single token contract. Each changed wallet shows its label, shortened address, previous value, new value, and contribution to the change.
+
+Choose **Looks right** or **Check again** for every listed balance. You can confirm one balance and recheck another in the same review. Retina rechecks only the wallets connected to the balances you selected, remembers the confirmed choices, and saves the complete snapshot after the remaining checks pass. Choose **Discard snapshot** when you do not want the unsaved capture in history.
+
+Closing **Updates** does not stop an active check. The dashboard notice can be dismissed while work continues, and the **Updates** indicator remains available for the current state. A new review or failure can show a new notice.
 
 ## Snapshot allowances
 
