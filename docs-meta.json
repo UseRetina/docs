@@ -13,8 +13,8 @@
     "guides/yield-maturities": { "verifiedAt": "2026-08-14", "verifiedAgainst": "12257fa641fb6bb32e89c8c63ac34608d9414481" },
     "guides/polymarket": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
     "guides/rewards-risk": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
-    "guides/ask-retina": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
-    "account/privacy-security": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
+    "guides/ask-retina": { "verifiedAt": "2026-08-24", "verifiedAgainst": "845ce814c857d5c7789df61059635da013fd0fbc" },
+    "account/privacy-security": { "verifiedAt": "2026-08-24", "verifiedAgainst": "845ce814c857d5c7789df61059635da013fd0fbc" },
     "account/backup-restore-export": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
     "account/coverage-troubleshooting": { "verifiedAt": "2026-08-14", "verifiedAgainst": "46dfa25f6e16908fd54942e26bac9957ba5573ef" },
     "account/pricing": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" }
