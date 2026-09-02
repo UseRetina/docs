@@ -6,7 +6,7 @@ description: "Published Retina pricing for Focus, Range, and Horizon, with payme
 Retina plans are priced by how many addresses you watch and how often you capture them.
 
 <Warning>
-The checkout foundation is deployed, but public payment methods remain unavailable until Retina's receiving wallets and recurring contracts are activated. Existing beta accounts already use the plan limits shown in **My Account**. Payment enforcement remains off until checkout rehearsals pass.
+Checkout is deployed. It shows only the payment methods Retina has activated, so it can be empty while receiving wallets are being set up. Existing beta accounts already use the plan limits shown in **My Account**, and payment enforcement remains off.
 </Warning>
 
 ## Focus
@@ -56,28 +56,30 @@ Automatic capacity that can no longer run that day can become available for manu
 
 Open the stable checkout at [useretina.xyz/subscribe](https://useretina.xyz/subscribe). The page only shows payment methods that Retina has activated.
 
-For an annual plan or a manual one-month payment, supported methods can include:
+Supported methods can include:
 
 - Pay from a supported EVM network and asset. The route settles the exact plan price as native USDC on Base.
 - Pay native USDC directly on Base.
 - Pay native USDC directly on Solana.
 
-For an automatic monthly plan, pay USDC through one of Retina's configured EVM subscription contracts. Renewal continues until you cancel it. Cancellation requires a wallet transaction that removes the contract's future USDC allowance. Access continues through the period already paid for.
+Each payment covers the period you chose. An annual payment covers a year and a monthly payment covers a month. Automatic renewal is unavailable, so nothing charges your wallet again on its own. Buying the same plan again before the current period ends adds the new period to the end of it.
 
-Retina verifies the payment or active subscription onchain before changing account access. A transaction cannot be reused for another order or account.
+Retina verifies the payment onchain before changing account access. A transaction cannot be reused for another order or account.
+
+Once your wallet has sent the payment, closing the page does not lose it. Retina watches the chain for that order and activates the plan when the transaction confirms, usually within a couple of minutes. Reopening the plan page shows the result.
 
 <Warning>
-All completed payments are final and non-refundable. Cancelling stops future renewals only. A routed payment that fails before Retina receives it may be returned automatically by the routing protocol and does not activate a plan.
+All completed payments are final and non-refundable. A routed payment that fails before Retina receives it may be returned automatically by the routing protocol, and it does not activate a plan.
 </Warning>
 
 ## Payment wallet and tracked addresses
 
 A payment is attached to the Retina account that created the order. The wallet used to pay does not become a tracked portfolio address unless you add it separately.
 
-Retina never asks for a seed phrase or private key. Tracking and wallet sign-in remain read-only. A payment or cancellation transaction happens only after you explicitly start it from the plan page and approve it in your wallet.
+Retina never asks for a seed phrase or private key. Tracking and wallet sign-in remain read-only. A payment transaction happens only after you explicitly start it from the plan page and approve it in your wallet.
 
 ## Current beta access
 
-Retina remains in closed beta while receiving wallets and recurring contracts are being activated. Existing beta accounts have an assigned Focus or Horizon entitlement. A new beta account receives Focus unless a different plan is granted. The limits visible in **My Account** are authoritative.
+Retina remains in closed beta and new accounts need an invite. Existing beta accounts have an assigned Focus or Horizon entitlement, and a new beta account receives Focus unless a different plan is granted. Those entitlements are unaffected when paid plans begin to be enforced. The limits visible in **My Account** are authoritative.
 
-Last verified: 9 August 2026.
+Last verified: 2 September 2026.

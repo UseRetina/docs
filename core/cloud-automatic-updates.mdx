@@ -15,7 +15,7 @@ When the browser and account already contain different histories, Retina pauses 
 
 ## Turn on automatic updates
 
-Open **My Account** and enable **Automatic portfolio updates**.
+Open **My Account** and enable **Automatic snapshots**. Open **Edit schedule** to change the capture time, timezone, or second daily snapshot when your plan includes one.
 
 Choose:
 
@@ -53,9 +53,9 @@ Retina does not add a partial automatic result to history. It rechecks temporary
 
 Open **Updates** when Retina reports that a snapshot needs review. Review each listed balance, recheck selected wallets, save the snapshot when the values are correct, or discard the unsaved snapshot.
 
-The review shows the previous and proposed snapshot totals, then identifies each balance that caused the pause. A token can include its contract address. A protocol summary is labelled with its protocol because it may not represent a single token contract. Each changed wallet shows its label, shortened address, previous value, new value, and contribution to the change.
+The review shows the previous and new snapshot totals, then identifies each balance that caused the pause. A token can include its contract address. A protocol summary is labelled with its protocol because it may not represent a single token contract. Each changed wallet shows its label, shortened address, previous value, new value, and contribution to the change.
 
-Choose **Looks right** or **Check again** for every listed balance. You can confirm one balance and recheck another in the same review. Retina rechecks only the wallets connected to the balances you selected, remembers the confirmed choices, and saves the complete snapshot after the remaining checks pass. Choose **Discard snapshot** when you do not want the unsaved capture in history.
+Choose **Use this value** or **Check again** for every listed balance. **Use this value** includes that balance in the snapshot. **Check again** refreshes only the wallets connected to that balance. You can use one value and recheck another in the same review. Retina remembers the completed choices and saves the complete snapshot after the selected checks pass. Choose **Discard snapshot** when you do not want the unsaved capture in history.
 
 Closing **Updates** does not stop an active check. The dashboard notice can be dismissed while work continues, and the **Updates** indicator remains available for the current state. A new review or failure can show a new notice.
 
@@ -79,4 +79,6 @@ See [Plans and pricing](/account/pricing).
 
 Retina keeps the last durable browser copy. Open **Updates** to retry backup or resolve a version conflict. Download a full backup before choosing a replacement when you want an extra recovery copy.
 
-Last verified: 14 August 2026.
+If your first account save stops after the portfolio uploads, Retina shows **Finish setup** in **Updates** and **My Account**. Choose it to complete the existing save and link the browser. This does not create another snapshot. The **+ Snapshot** action remains paused until setup finishes so Retina cannot create disconnected history.
+
+Last verified: 15 August 2026.
