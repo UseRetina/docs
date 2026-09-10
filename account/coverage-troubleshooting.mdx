@@ -44,7 +44,7 @@ Open **What Changed** and review wallet activity. For an automatic snapshot, ope
 
 A protocol summary may not have a contract address because the provider reports a combined protocol balance. Retina labels that row with the protocol and shows the contributing wallets instead of presenting it as a token.
 
-Provider errors, token repricing, protocol migrations, missing supplementary data, and real transfers can all change a result. Retina keeps blocking candidates out of saved history until you review them.
+Provider errors, token repricing, protocol migrations, missing supplementary data, and real transfers can all change a result. Solana lending totals also changed in September 2026: protocols that were being dropped now report correctly, and loans against unvalued collateral are now excluded. Retina keeps blocking candidates out of saved history until you review them.
 
 ## A provider check is delayed or stopped
 
@@ -57,6 +57,20 @@ A **partial** row means Retina loaded usable wallet data but one or more supplem
 "Today's data allowance for this account is used" means the signed-in account reached its plan's provider safety ceiling. The allowance covers setup, automatic captures, and recovery attempts, and resets at midnight UTC. Repeated address checks consume it even when no snapshot is saved.
 
 If a provider remains unavailable after the retry, try later. Remove that wallet only when you intentionally want a snapshot without it.
+
+## A Solana position was left out on purpose
+
+A message beginning **"Partial Solana coverage"** means Retina read the wallet and chose not to count something. The data arrived and was refused, which is different from a provider that failed.
+
+**Borrowing against collateral that could not be valued.** Some principal tokens and senior tranches have no published price. When a provider values a loan's collateral at zero but still reports its debt, counting that debt alone would subtract money you have not lost. Retina leaves the whole loan out and names the protocol. The same applies when reported debt exceeds collateral by more than ten times, which every lending protocol liquidates long before, so the figure is an upstream error rather than a position.
+
+**Liquidity priced without its underlying tokens.** The position is counted and its value is understated.
+
+**Position data is several days old.** Retina reports the age instead of treating a stale figure as current.
+
+**A protocol is active but returned nothing.** A receipt token proves the position exists even though the protocol read came back empty.
+
+These need no action. They explain a total that would otherwise look too low, and they clear once the provider can price the asset.
 
 ## APY or maturity is missing
 
@@ -71,4 +85,4 @@ Open the position details to see the available source. Add a manual APY or matur
 
 Use the **Help** button in Retina when the issue continues. Include the page, wallet family, and visible error. Never send a seed phrase or private key.
 
-Last verified: 14 August 2026.
+Last verified: 10 September 2026.
