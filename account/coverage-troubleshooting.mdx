@@ -52,7 +52,9 @@ Provider errors, token repricing, protocol migrations, missing supplementary dat
 
 A **partial** row means Retina loaded usable wallet data but one or more supplementary provider reads did not finish. The row action changes to **Retry**. During a bulk check, Retina queues that retry behind the current wallet in the same network family.
 
-"TopLedger timed out" means a required Solana verification exceeded Retina's 45-second reliability window. Retina queues one retry instead of saving an incomplete result. An "offline" status is reserved for a provider request that failed rather than merely responding slowly.
+**Timed out** means a required Solana check took longer than Retina allows. Retina queues one retry instead of saving an incomplete result. **Unavailable** means the read failed rather than responding slowly.
+
+When a wallet cannot be read, **Copy details** copies the technical detail. Include it if you contact support.
 
 "Today's data allowance for this account is used" means the signed-in account reached its plan's provider safety ceiling. The allowance covers setup, automatic captures, and recovery attempts, and resets at midnight UTC. Repeated address checks consume it even when no snapshot is saved.
 
@@ -85,4 +87,4 @@ Open the position details to see the available source. Add a manual APY or matur
 
 Use the **Help** button in Retina when the issue continues. Include the page, wallet family, and visible error. Never send a seed phrase or private key.
 
-Last verified: 10 September 2026.
+Last verified: 13 September 2026.
