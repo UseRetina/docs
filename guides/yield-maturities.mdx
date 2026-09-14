@@ -1,6 +1,6 @@
 ---
 title: "Yield and maturities"
-description: "Review APY, estimated income, locked capital, and upcoming unlock dates across your portfolio."
+description: "Review quoted and earned APY, estimated income, locked capital, and upcoming unlock dates across your portfolio."
 ---
 
 Retina combines yield and maturity information with each position's value, wallet, and protocol context.
@@ -11,9 +11,10 @@ The Dashboard Yield Table shows yield-bearing positions with:
 
 - Protocol and instrument
 - Current position value
-- APY
+- APY, the quoted rate
+- Earned APY, what the positions actually earned
 - Estimated income per day
-- The source or match used for the APY
+- Where the quoted APY comes from, such as **DefiLlama APY** or **Pendle APY**
 
 Filter by wallet or chain and hide small positions. When a provider does not supply a reliable APY, you can add a manual value.
 
@@ -22,6 +23,16 @@ The table contains protocol positions. Free wallet balances stay in portfolio to
 <Note>
 Estimated daily income assumes the displayed APY remains constant over the calculation period. Actual rates, fees, incentives, and token values can change.
 </Note>
+
+## Earned APY
+
+Earned APY is measured from your own snapshots over the last 30 days. For each position, Retina follows how its balance grows, or how much each token becomes worth against the asset underneath it. Deposits and withdrawals do not count as earnings, and neither does the price of the asset itself moving, such as ETH rising.
+
+A position needs at least a week of snapshots before it has an Earned APY. Retina shows a dash when the snapshots disagree too much to support a reliable rate, for example when a token's price jumps from day to day. Altcoins, unclaimed rewards, perpetuals, options, and manual positions are not measured.
+
+A protocol's Earned APY is weighted by position value. It appears only when positions holding at least half of what you supply to that protocol have a measured rate. On a protocol's page, a borrowed position shows what borrowing cost over the same 30 days, listed as **Borrow cost**.
+
+When you view an older snapshot, Earned APY covers the 30 days before that snapshot. Past earnings do not guarantee future return.
 
 ## Review maturities
 
@@ -45,4 +56,4 @@ Retina can obtain a date from protocol data, a market resolution, or a manual po
 
 Use the ladder to find capital that may soon become available. Retina does not redeem, roll, or claim a position for you. Open the relevant protocol separately when you decide to act.
 
-Last verified: 14 August 2026.
+Last verified: 14 September 2026.
