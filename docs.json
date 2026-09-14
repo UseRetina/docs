@@ -52,7 +52,7 @@
           "guides/holdings",
           "guides/yield-maturities",
           "guides/polymarket",
-          "guides/rewards-risk",
+          "guides/rewards",
           "guides/ask-retina"
         ]
       },
@@ -77,8 +77,8 @@
     { "source": "/pages/protocols", "destination": "/guides/holdings" },
     { "source": "/pages/positions", "destination": "/guides/holdings" },
     { "source": "/pages/maturity-ladder", "destination": "/guides/yield-maturities" },
-    { "source": "/pages/risk-scores", "destination": "/guides/rewards-risk" },
-    { "source": "/pages/rewards", "destination": "/guides/rewards-risk" },
+    { "source": "/pages/rewards", "destination": "/guides/rewards" },
+    { "source": "/guides/rewards-risk", "destination": "/guides/rewards" },
     { "source": "/pages/history", "destination": "/core/history-performance" },
     { "source": "/concepts/snapshots", "destination": "/core/snapshots" },
     { "source": "/concepts/tracker-vs-viewer", "destination": "/getting-started/introduction" },
