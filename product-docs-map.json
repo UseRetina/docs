@@ -12,7 +12,7 @@
     "guides/holdings": ["dashboard.html", "setup.html", "snapshot-engine.js"],
     "guides/yield-maturities": ["dashboard.html", "snapshot-engine.js"],
     "guides/polymarket": ["dashboard.html", "snapshot-engine.js", "functions/_shared/snapshot-runner.js"],
-    "guides/rewards-risk": ["dashboard.html", "snapshot-engine.js"],
+    "guides/rewards": ["dashboard.html", "snapshot-engine.js"],
     "guides/ask-retina": ["retina-ai.js", "retina-ai-query.js", "retina-ai-worker.js", "retina-ai-cpu-worker.js", "functions/api/[[path]].js"],
     "account/privacy-security": ["gate.html", "retina-auth.js", "retina-cloud.js", "privacy.html", "docs/CLOUD_DATA_CONTRACT.md", "functions/_shared/cloud-crypto.js"],
     "account/backup-restore-export": ["dashboard.html", "retina-cloud.js", "setup.html"],
