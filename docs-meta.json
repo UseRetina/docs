@@ -8,7 +8,7 @@
     "core/snapshots": { "verifiedAt": "2026-09-14", "verifiedAgainst": "cf3eb2f2907a75e50e91c488a80ad34b0e966fd2" },
     "core/history-performance": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
     "core/cloud-automatic-updates": { "verifiedAt": "2026-08-14", "verifiedAgainst": "46dfa25f6e16908fd54942e26bac9957ba5573ef" },
-    "guides/dashboard": { "verifiedAt": "2026-09-15", "verifiedAgainst": "PENDING" },
+    "guides/dashboard": { "verifiedAt": "2026-09-15", "verifiedAgainst": "dd9a182fc48a66a60da7649f7fa49ccade7f7183" },
     "guides/holdings": { "verifiedAt": "2026-09-15", "verifiedAgainst": "d1444f657c4c58b321064f94a344d50b389b593d" },
     "guides/yield-maturities": { "verifiedAt": "2026-09-15", "verifiedAgainst": "d1444f657c4c58b321064f94a344d50b389b593d" },
     "guides/polymarket": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
