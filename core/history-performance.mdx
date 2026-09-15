@@ -12,6 +12,7 @@ Open **History** and choose **Snapshots** to review the saved timeline.
 You can inspect:
 
 - Portfolio value over time
+- What your positions earned each day, in the Earnings calendar
 - Raw value change and flow-adjusted performance
 - Net invested capital
 - Best and worst snapshot intervals
@@ -20,6 +21,24 @@ You can inspect:
 - The snapshot ledger, with open, rename, select, export, and delete actions
 
 Use the date range and value or performance controls to focus the comparison.
+
+## Earnings
+
+The **Earnings** card shows what your positions earned, measured from your snapshots, with any borrowing cost subtracted. It follows the date range above it.
+
+With **Days** selected, each day is a square in a month calendar. A darker square earned more; a red square cost more than it earned. Select a day, or hover it on a computer, to see what each protocol earned, any borrowing cost, and how much of your earning positions could be measured. **Weeks** and **Months** show the same earnings as bars, split by protocol. The five protocols that earned the most in the range have their own colour, and the rest share one.
+
+Under the calendar, each protocol's earnings for the range are listed with its [Earned APY](/guides/yield-maturities#earned-apy). Select a protocol to open it. Each protocol's page has the same card for that protocol alone.
+
+How a day is counted:
+
+- Each position earns its value that day at the rate measured over the 30 days before it.
+- When a day cannot be measured, the position keeps its last measured rate for up to 30 days, so a gap in measurement does not look like a fall in income.
+- A position's first week, before it can be measured, uses its first measured rate.
+- A day without a snapshot counts the snapshot before it, for up to a week, and says so.
+- A deposit makes the following days larger because more money is earning. It is never counted as earnings.
+
+The card appears once a position has a week of snapshots. In the percentage view, amounts are shown as a share of what earns.
 
 ## What Changed
 
@@ -60,4 +79,4 @@ Open **My Account** to choose:
 - Whether gas counts as a performance drag
 - Whether the dashboard shows total value or liquid and locked value separately
 
-Last verified: 8 August 2026.
+Last verified: 15 September 2026.
