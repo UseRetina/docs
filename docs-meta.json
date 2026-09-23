@@ -10,7 +10,7 @@
     "core/cloud-automatic-updates": { "verifiedAt": "2026-09-21", "verifiedAgainst": "a86227df1d9dbfa4901a68c9234f417cb2727fa6" },
     "guides/dashboard": { "verifiedAt": "2026-09-15", "verifiedAgainst": "d223f43e600687956562c4ac3ef55e36f96a64f3" },
     "guides/holdings": { "verifiedAt": "2026-09-15", "verifiedAgainst": "d223f43e600687956562c4ac3ef55e36f96a64f3" },
-    "guides/yield-maturities": { "verifiedAt": "2026-09-23", "verifiedAgainst": "e535e55272141ae219acefae5cbaeb02912c376d" },
+    "guides/yield-maturities": { "verifiedAt": "2026-09-23", "verifiedAgainst": "1d94205fdf0173751ae32e96d51aecc1800966be" },
     "guides/polymarket": { "verifiedAt": "2026-08-08", "verifiedAgainst": "ce72dc7a407b1cf191e91cb4e14c4934ed9a418b" },
     "guides/rewards": { "verifiedAt": "2026-09-14", "verifiedAgainst": "36aeb2707eaf9e49158e50510170579f44d304c7" },
     "guides/ask-retina": { "verifiedAt": "2026-09-21", "verifiedAgainst": "c50313d2e1f48acb5f659e68988f9fccc68f68c6" },
