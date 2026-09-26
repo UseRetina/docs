@@ -5,3 +5,9 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Repository files the site must not publish: agent instructions and the
+# metadata scripts/docs-checks.mjs reads. Mintlify serves any other root file.
+AGENTS.md
+docs-meta.json
+product-docs-map.json
