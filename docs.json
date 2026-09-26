@@ -95,7 +95,8 @@
   ],
   "logo": {
     "light": "/logo/retina-lockup-on-light.svg",
-    "dark": "/logo/retina-lockup-on-dark.svg"
+    "dark": "/logo/retina-lockup-on-dark.svg",
+    "href": "https://docs.useretina.xyz/getting-started/introduction"
   },
   "navbar": {
     "links": [
