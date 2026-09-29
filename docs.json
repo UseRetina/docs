@@ -18,6 +18,11 @@
   "metadata": {
     "timestamp": true
   },
+  "seo": {
+    "metatags": {
+      "msvalidate.01": "A3D8AF827E882E87B067CFDA5AEC5B8D"
+    }
+  },
   "contextual": {
     "options": ["copy", "view", "assistant"]
   },
