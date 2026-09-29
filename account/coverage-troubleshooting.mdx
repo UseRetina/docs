@@ -65,6 +65,8 @@ A message beginning **"Partial Solana coverage"** means Retina read the wallet a
 
 **Borrowing against collateral that could not be valued.** Some principal tokens and senior tranches have no published price. When a provider values a loan's collateral at zero but still reports its debt, counting that debt alone would subtract money you have not lost. Retina leaves the whole loan out and names the protocol. The same applies when reported debt exceeds collateral by more than ten times, which every lending protocol liquidates long before, so the figure is an upstream error rather than a position.
 
+**A holding with no identifiable token.** A provider can report a lending deposit that names no token yet carries a value, once in the quintillions of dollars. Retina cannot check a value it cannot tie to a token, so it leaves that loan or deposit out and names the protocol.
+
 **Liquidity priced without its underlying tokens.** The position is counted and its value is understated.
 
 **Position data is several days old.** Retina reports the age instead of treating a stale figure as current.
