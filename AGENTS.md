@@ -65,3 +65,7 @@ Prefer this order:
 5. `Last verified: D Month YYYY.`
 
 Mintlify displays the Git-derived last-modified date through `metadata.timestamp` in `docs.json`. The visible verification line records when behavior was last checked. These dates have different meanings and must remain separate.
+
+## Search engines
+
+Every push to `main` tells Bing which pages changed (`.github/workflows/bing-submit.yml`, `scripts/bing-submit.mjs`). It waits four minutes for Mintlify to publish, then submits the changed `.mdx` pages that the live sitemap lists, through Bing's URL Submission API. It needs the repository secret `BING_WEBMASTER_API_KEY` and does nothing without it. Do not submit docs URLs in Bing Webmaster Tools by hand. `BING_DRY_RUN=1 node scripts/bing-submit.mjs` shows what a push would send.
