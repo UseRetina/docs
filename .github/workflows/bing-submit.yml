@@ -1,0 +1,36 @@
+name: Tell Bing about changed pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Mintlify publishes a push in a minute or two. Submitting before that
+      # would point Bing at the previous version.
+      - name: Wait for Mintlify to publish
+        run: sleep 240
+
+      - name: Submit changed pages
+        run: node scripts/bing-submit.mjs
+        env:
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
