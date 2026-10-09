@@ -24,9 +24,14 @@ if (!key && !dryRun) {
   process.exit(0);
 }
 
-// A brand-new branch has no previous commit; compare with the parent instead.
+// PAGES (routes separated by spaces, such as "guides/holdings") names the
+// pages outright, for a manual run from the Actions tab. Otherwise the push
+// decides; a brand-new branch has no previous commit, so it compares with the
+// parent instead.
+const named = String(process.env.PAGES || '').trim().split(/\s+/).filter(Boolean)
+  .map(route => `${route.replace(/^\/+/, '').replace(/\.mdx$/, '')}.mdx`);
 const base = /^0+$/.test(before) || !before ? `${after}~1` : before;
-const changed = execFileSync('git', ['diff', '--name-only', '--diff-filter=AMR', base, after], { encoding: 'utf8' })
+const changed = named.length ? named : execFileSync('git', ['diff', '--name-only', '--diff-filter=AMR', base, after], { encoding: 'utf8' })
   .split('\n')
   .map(line => line.trim())
   .filter(file => file.endsWith('.mdx'));
