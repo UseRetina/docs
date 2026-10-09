@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="64" viewBox="0 0 320 64">
-  <g>
-    <circle cx="32" cy="32" r="26" fill="none" stroke="#E8E6E1" stroke-width="4"></circle>
-    <line x1="9" y1="38" x2="55" y2="38" stroke="#E8E6E1" stroke-width="4" stroke-linecap="round"></line>
-  </g>
-  <text x="80" y="46" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="44" letter-spacing="-1.6" fill="#E8E6E1">Retina<tspan fill="#8B8DF0">.</tspan></text>
-</svg>
