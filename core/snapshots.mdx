@@ -22,8 +22,10 @@ Older snapshots keep the values recorded at capture time. They do not change whe
 
 Select **+ Snapshot** from the app header.
 
-- Use the quick capture to reuse saved sources.
-- Edit sources when you want to add, remove, or relabel something first.
+- **Add snapshot now** captures the sources you already track. When automatic updates are on, Retina's servers run the capture, so you can keep using the app, close the tab, or lock your phone. A notice at the bottom of the app shows how many sources Retina has read and an estimate of the time left. When the snapshot is saved, the notice says **Your new snapshot is ready**; select **Show it** to load the new snapshot. If you closed the tab, the app opens on the new snapshot the next time you visit.
+- **Change what you track** opens setup, where you add, remove, or relabel sources first. A capture from setup runs in your browser, so keep the setup page open until the snapshot is saved.
+
+When automatic updates are off, **Add snapshot now** also runs in your browser. Keep the page open until the snapshot is saved.
 
 Retina checks snapshot access and account limits before starting. My Account, the **+ Snapshot** choice, setup, the capture reservation, and the final save all use the same current allowance from your account. The app shows the next available capture time when a cooldown applies.
 
@@ -41,7 +43,7 @@ Pendle positions have one exception. When Pendle cannot be reached, Retina can k
 
 Retina checks whether required sources returned complete results and whether large changes can be explained. A change that a transaction Retina captured accounts for, such as a withdrawal from a protocol, is explained and does not pause the snapshot.
 
-For a manual capture, you may be asked to:
+For a capture that runs in your browser, you may be asked to:
 
 - Refresh an affected wallet
 - Exclude an incorrect asset and recalculate
@@ -49,9 +51,9 @@ For a manual capture, you may be asked to:
 
 A snapshot keeps the time your wallets were read, even when you continue some time later. If a newer snapshot was saved while it waited, create a new snapshot instead.
 
-Automatic captures use the same principle. A blocking finding becomes an unsaved snapshot review instead of entering history. An advisory finding can be saved with a visible flag. Open **Updates** from the sidebar, or from **More** on a phone, to review either state.
+Captures that Retina's servers run use the same principle. These are automatic updates, and **Add snapshot now** while automatic updates are on. A blocking finding becomes an unsaved snapshot review instead of entering history. An advisory finding can be saved with a visible flag. Open **Updates** from the sidebar, or from **More** on a phone, to review either state.
 
-An automatic review compares the previous and proposed totals and shows the balances that caused the pause. For each balance, choose **Use this value** or **Check again**. You can confirm a known deposit while rechecking a different protocol or wallet balance. Retina targets only the wallets connected to the selected balance and keeps the complete snapshot unsaved until the remaining checks pass.
+A server review compares the previous and proposed totals and shows the balances that caused the pause. For each balance, choose **Use this value** or **Check again**. You can confirm a known deposit while rechecking a different protocol or wallet balance. Retina targets only the wallets connected to the selected balance and keeps the complete snapshot unsaved until the remaining checks pass.
 
 ## Select and manage snapshots
 
