@@ -51,7 +51,10 @@ Retina does not add a partial automatic result to history. It rechecks temporary
 
 - A blocking finding waits for your review.
 - An advisory finding is saved with its reason attached.
-- Later automatic updates can continue while an older candidate remains available for review.
+- Later automatic updates can continue while an earlier capture waits for review.
+- When a later capture is paused by the same change, one review covers both captures. Saving that review saves both captures in the order they were taken, and discarding the review discards both.
+- A capture paused by a different change gets its own review. Save or discard the earlier review first, so both captures can stay in history.
+- An unsaved capture taken before a snapshot that is already saved can no longer be added to history, and Retina removes that capture from **Updates**.
 
 Open **Updates** when Retina reports that a snapshot needs review. Review each listed balance, recheck selected wallets, save the snapshot when the values are correct, or discard the unsaved snapshot.
 
