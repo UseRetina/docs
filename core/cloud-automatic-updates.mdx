@@ -15,13 +15,13 @@ When the browser and account already contain different histories, Retina pauses 
 
 ## Turn on automatic updates
 
-Open **Settings** with the gear at the top right, or from **More** on a phone, and turn on **Automatic snapshots**. Then open **Edit schedule** and choose:
+Open **Settings** with the gear at the top right, or from **More** on a phone, and turn on **Automatic snapshots**. The schedule appears below the switch. Choose:
 
 - The capture time
 - Your timezone
 - A second daily slot when your account includes one
 
-The **Snapshots** section of Settings shows the next planned run and today's automatic and manual snapshot use.
+Each change saves as you make it. The **Next Snapshot** card on the dashboard shows the next planned run and today's automatic and manual snapshot use.
 
 Automatic updates run without an open browser. They use the sources and portfolio settings saved with your account. **Add snapshot now** runs the same way, with or without automatic updates, so a capture you start continues after you close the tab.
 
@@ -31,7 +31,7 @@ update is running. Retina continues it in the background.
 
 ## Notifications
 
-Notifications arrive by email, and on Telegram once you connect a chat in **Settings**. Choose which notifications you receive under **Choose notifications**. They can cover:
+Notifications arrive by email, and on Telegram once you connect a chat in **Settings**. While email or Telegram is on, **Settings** lists each kind of notification with its own switch. The list covers:
 
 - Successful automatic updates
 - Failed updates
@@ -75,7 +75,7 @@ The account panel shows your total address, daily capture, and retained-history 
 | Range | 8 | 2 | 1 | 5,000 |
 | Horizon | 50 | 2 | 1 | 5,000 |
 
-The address limit applies across EVM, Solana, and Polymarket sources together. An automatic slot becomes available for manual use when no automatic run can still use it that day. In Settings, **Snapshots today** counts that slot in the **Manual** row and shows only the automatic capacity still scheduled for today. The **+ Snapshot** choice, setup, capture reservation, and final save use the same effective allowance. Retina keeps successful captures at least 1 hour apart.
+The address limit applies across EVM, Solana, and Polymarket sources together. An automatic slot becomes available for manual use when no automatic run can still use it that day. The dashboard's **Next Snapshot** card counts that slot in the **Manual** row and shows only the automatic capacity still scheduled for today. The **+ Snapshot** choice, setup, capture reservation, and final save use the same effective allowance. Retina keeps successful captures at least 1 hour apart.
 
 Interactive wallet checks and automatic captures share a separate account data allowance. Retina applies it on the server before contacting a portfolio provider. A failed or interrupted pass has recovery headroom, while repeated checks cannot run without limit. The visible error states when this daily data allowance has been used.
 
