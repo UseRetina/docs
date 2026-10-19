@@ -12,9 +12,13 @@ Retina calculates portfolio values with deterministic local tools. An AI mode ca
 Examples include:
 
 - How much ETH exposure do I have?
-- Which wallet has the most stablecoins?
+- Do I have more BTC or ETH?
+- Which wallet holds the most stablecoins?
+- What share of my stablecoins is on Arbitrum?
 - What matures in the next 30 days?
 - What changed since the previous snapshot?
+- How did my portfolio do this week compared with the week before?
+- Which chain grew the most since 1 October?
 - Which protocols are my largest exposures?
 - Which positions have the lowest APY?
 - What did my farms actually earn, beside what they quote?
@@ -36,6 +40,12 @@ Ask what a position actually earned and the answer adds [Earned APY](/guides/yie
 ## Earnings
 
 Ask what you earned and the answer is in dollars, from the same day-by-day count as the [Earnings calendar](/core/history-performance#earnings). Name a window, such as last week or the last 90 days, or name a protocol to see only its share. When a day has no snapshot of its own, it is counted from the snapshot before it, and the answer says how many days that applies to.
+
+## Changes over time
+
+Name a stretch of time in your own words, such as since 1 October, the last 10 days, in September or yesterday, and Ask Retina measures the change in value between the two snapshots that bound that stretch. Set two stretches against each other, such as this month against last month, and the answer gives the change in each and the gap between them. You can also ask which wallet, chain or protocol grew or fell the most over a stretch, or which of two holdings grew more. Every answer names the snapshot dates it measured. When your snapshots do not cover a stretch, the answer says so instead of measuring a different one.
+
+A change in value includes deposits and withdrawals. To see a return with deposits and withdrawals taken out, ask about performance.
 
 ## Longer requests
 

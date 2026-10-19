@@ -37,6 +37,8 @@ In a position's first week, Retina shows any rate between -50% and 50%. After th
 
 Altcoins, Pendle YT tokens, unclaimed rewards, perpetuals, options, and manual positions are not measured. A YT token loses its value by design as it approaches maturity, while what it earns is paid out separately. A Pendle LP appears as one position, and the PT and underlying token inside it are not measured separately. A protocol that a provider reports only as one dollar total, with no token behind it, shows a dash too, because that total does not show what the position earned. A token held as itself, such as USDC, ETH or BTC in a wallet or a Hyperliquid spot balance, has no rate of its own, so it shows a dash and does not count toward its protocol's Earned APY.
 
+A token on another currency is measured in that currency, so a currency falling against the dollar counts as its asset's price moving, the same way ETH falling does for an ETH token. Brix's wiTRY, for example, is measured in Turkish lira using the European Central Bank's daily exchange rates. Jupiter's JLP is measured against the assets in its pool, in the proportions Jupiter reports for the pool: SOL, ETH, BTC and stablecoins. JLP's Earned APY is therefore what JLP gained beyond those assets, from trading fees and from what traders lost to the pool.
+
 A protocol's Earned APY is weighted by position value. It appears only when positions holding at least half of what you supply to that protocol have a measured rate. On a protocol's page, a borrowed position shows what borrowing cost over the same 30 days, listed as **Borrow cost**.
 
 When you view an older snapshot, Earned APY covers the 30 days before that snapshot. Past earnings do not guarantee future return.
