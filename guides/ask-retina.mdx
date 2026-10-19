@@ -12,6 +12,7 @@ Retina calculates portfolio values with deterministic local tools. An AI mode ca
 Examples include:
 
 - How much ETH exposure do I have?
+- What is my asset exposure like?
 - Do I have more BTC or ETH?
 - Which wallet holds the most stablecoins?
 - What share of my stablecoins is on Arbitrum?
@@ -24,6 +25,9 @@ Examples include:
 - What did my farms actually earn, beside what they quote?
 - How much did I earn last week, and which day earned the most?
 - Which protocol earned the most last month?
+- Which are my highest earning protocols?
+- When did I last add money, and when did I last take some out?
+- How much gold do I own?
 - Which of my positions are locked, and how much is liquid today?
 - How much have I borrowed, and against what?
 - What Polymarket positions are open?
@@ -31,7 +35,11 @@ Examples include:
 - Which data quality issues should I review?
 - What is the difference between time-weighted and money-weighted return for me?
 
-Follow-up questions can use the current conversation context. Chat history stays in memory and disappears when you reload the page.
+A short follow-up changes the previous answer: ask "what about wallets?", "in earned APY instead", "lowest first", "top 20" or "and on Base?" after a ranking. Chat history stays in memory and disappears when you reload the page.
+
+## Charts and tables
+
+A question about how your portfolio is spread, such as asset exposure or a breakdown by chain, protocol or wallet, is answered with the same ring chart as the dashboard. Its legend lists every name with its amount and share. Add "as a table" to get a table instead, or "as a chart" to get a chart where Ask Retina would use a table. A question about your Polymarket profit and loss is answered with the profit and loss chart from the Polymarket page.
 
 ## Quoted and earned rates
 
