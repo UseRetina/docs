@@ -35,11 +35,13 @@ Examples include:
 - Which data quality issues should I review?
 - What is the difference between time-weighted and money-weighted return for me?
 
-A short follow-up changes the previous answer: ask "what about wallets?", "in earned APY instead", "lowest first", "top 20" or "and on Base?" after a ranking. Chat history stays in memory and disappears when you reload the page.
+A short follow-up changes the previous answer: ask "what about wallets?", "in earned APY instead", "lowest first", "top 20" or "and on Base?" after a ranking. After a breakdown, "and by protocol?" or "what about chains?" gives the same breakdown by that dimension, and "as a table" redraws it. A correction works the same way: after an asset breakdown, "I said protocol, not asset" answers again by protocol. Chat history stays in memory and disappears when you reload the page.
+
+When Private mode cannot place a question, Ask Retina answers the closest question it knows and says which one at the top of the answer, for example "I read this as “When did I last deposit?”". Ask again in other words if that reading is wrong.
 
 ## Charts and tables
 
-A question about how your portfolio is spread, such as asset exposure or a breakdown by chain, protocol or wallet, is answered with the same ring chart as the dashboard. Its legend lists every name with its amount and share. Add "as a table" to get a table instead, or "as a chart" to get a chart where Ask Retina would use a table. A question about your Polymarket profit and loss is answered with the profit and loss chart from the Polymarket page.
+A question about how your portfolio is spread, such as asset exposure or a breakdown by chain, protocol or wallet, is answered with the same ring chart as the dashboard. Its legend lists every name with its amount and share. A ring of your whole portfolio also gives wallet balances held outside any protocol, Polymarket and metals a slice each, so its slices add up to the total. A ring with more than ten slices groups the smallest into one, and the full list opens underneath it. Add "as a table" to get a table instead, or "as a chart" to get a chart where Ask Retina would use a table. A question about your Polymarket profit and loss is answered with the profit and loss chart from the Polymarket page.
 
 ## Quoted and earned rates
 
@@ -57,7 +59,7 @@ A change in value includes deposits and withdrawals. To see a return with deposi
 
 ## Longer requests
 
-A request written as a brief for an analyst, such as "Break down my exposure by asset, chain and protocol" or "Show what matures in the next 7, 30, 60 and 90 days", is read as a whole. Ask Retina answers each analysis it can calculate in its own labelled section, in the order you asked. When a request asks for something Retina does not record, such as oracle dependencies, Polymarket market categories or the terms of a maturity, one note at the end of the answer says so. Retina plans these requests itself in every mode, so a longer request does not use the Cloud AI quota.
+A request written as a brief for an analyst, such as "Break down my exposure by asset, chain and protocol" or "Show what matures in the next 7, 30, 60 and 90 days", is read as a whole. Ask Retina answers each analysis it can calculate in its own labelled section, in the order you asked. A request that names only some dimensions, such as only protocols, gets a breakdown for those dimensions only. When a request asks for something Retina does not record, such as oracle dependencies, Polymarket market categories or the terms of a maturity, one note at the end of the answer says so. Retina plans these requests itself in every mode, so a longer request does not use the Cloud AI quota.
 
 ## Choose a mode
 
@@ -69,7 +71,7 @@ A request written as a brief for an analyst, such as "Break down my exposure by 
     Improves interpretation and wording with a model that runs on your device. Availability depends on browser support and device capacity. The first use may require a model download.
   </Tab>
   <Tab title="Cloud AI">
-    Uses Gemini for harder wording. Retina sends the question and a compact set of relevant portfolio facts. A daily quota applies and the mode is optional.
+    Uses Gemini for harder wording. Retina sends your question, the earlier questions in the chat with how each was read, and the names of what you hold, such as protocols, chains and tokens. Balances and values are not sent. A wallet named only by its address is sent under a stand-in name. A daily quota applies and the mode is optional.
   </Tab>
 </Tabs>
 
