@@ -37,7 +37,7 @@ An automatic slot can become available for manual use when no automatic run rema
 
 When a wallet cannot be read, Retina shows **No snapshot saved** and spends no capture slot. Select **Try again** after a few minutes. If the account's data allowance is used, it resets at midnight UTC.
 
-Pendle positions have one exception. When Pendle cannot be reached, Retina can keep the value Pendle last gave a position for up to 48 hours from when Pendle priced it, as long as nothing moved that position since: no deposit, withdrawal, transfer or stake of its LP, PT or YT. Other positions in the wallet are read as usual. The snapshot is saved, and the next snapshot Pendle answers brings the value up to date. Earned APY leaves those days out, so a reused value never counts as earnings.
+Pendle positions have one exception. When Pendle cannot be reached, Retina can keep the value Pendle last gave a position for up to 48 hours from when Pendle priced it, as long as nothing moved that position since: no deposit, withdrawal, transfer or stake of its LP, PT or YT. Other positions in the wallet are read as usual. The snapshot is saved, and the next snapshot Pendle answers brings the value up to date. Earned APY leaves those days out, so a reused value never counts as earnings. A small Pendle position that no other source can price, such as a PT after its maturity date, keeps the value per token Pendle last gave it for as long as Pendle cannot be reached, as long as it is worth at most $25 and at most 0.01% of your portfolio. A few dollars of an expired position can no longer stop a snapshot of everything else.
 
 ## Review before saving
 
