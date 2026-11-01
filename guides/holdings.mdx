@@ -11,10 +11,12 @@ The Wallets view groups value across EVM, Solana, and Hyperliquid sources. Each 
 
 Open a wallet to inspect:
 
-- What it earned over the last 30 days, and day by day in its own [Earnings calendar](/core/history-performance#earnings)
-- Its positions, each with its Quoted APY and [Earned APY](/guides/yield-maturities#earned-apy), and its spot holdings
-- Exposure by protocol, chain, and asset
-- Wallet value history
+- Its value and the change since the last snapshot, above the wallet's value history
+- What it earned over the last 30 days, the [Earned APY](/guides/yield-maturities#earned-apy) of its positions (point at it to see the quoted APY), how much of the wallet sits in protocols, what it has borrowed, and its next unlock
+- Its positions, each with its Quoted APY and Earned APY
+- **Tokens**: the tokens held in the wallet itself
+- **Where it is**: the wallet's value by protocol, chain, and asset
+- What it earned day by day, in its own [Earnings calendar](/core/history-performance#earnings)
 - **Tokens, past year**: the tokens held in an EVM or Solana wallet over the last 12 months, including the time before Retina started tracking it. A dashed line marks when the wallet was added to Retina. Deposits in protocols are not included.
 - Relevant wallet activity
 
@@ -28,7 +30,7 @@ Filter by wallet, chain, protocol, asset, position type, or source. Search token
 
 Select a row to inspect available fields such as amount, value, protocol, maturity, APY, liquidity, wallet identity, and source. Lending and borrowing positions also show the health factor, loan to value, and liquidation threshold that the protocol reports.
 
-If a detected position is wrong, for example a deposit you have already withdrawn, select it in the latest snapshot and choose **Leave out of new snapshots**. Retina leaves that one position out from the next snapshot on, in that wallet only, and saved snapshots keep what they recorded. To undo the choice before the next snapshot, choose **Keep it** in the same row. After the next snapshot, the position is listed above the table with **Bring back**.
+If a detected position is wrong, for example a deposit you have already withdrawn, select it in the latest snapshot and choose **Leave out of new snapshots**. Retina leaves that one position out from the next snapshot on, in that wallet only, and saved snapshots keep what they recorded. To undo the choice before the next snapshot, choose **Keep it** in the same row. After the next snapshot, the position is listed in **Settings**, under **Portfolio settings**, **Hidden positions**, with **Bring back**. When the source stops reporting the position, Retina removes it from that list by itself.
 
 Use **+ Add position** for a manual holding. Editing a manual position affects the current working portfolio and future snapshots. Saved older snapshots remain unchanged.
 
