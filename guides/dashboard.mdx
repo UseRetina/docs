@@ -13,6 +13,8 @@ The top of the page shows total portfolio value and the selected change measure.
 
 Retina also shows counts for positions, protocols, and tracked on-chain wallets. When the portfolio borrows, a line under the total shows how much is supplied and how much is borrowed.
 
+Beside the total are **Next Snapshot**, **Metals** and the **Watchlist**. On a phone they sit in one row under the total; swipe it sideways to see the Watchlist. The day's snapshot counts are in Settings.
+
 ## Percentage view
 
 Select **%** in the top bar to show every amount as a share of your portfolio. Figures on a wallet page become shares of that wallet, token quantities are hidden, and activity lists leave out amounts and gas. Ask Retina answers the same way. Market prices in the watchlist and the metals summary stay visible. Select **$** to switch back. Retina remembers your choice on this device. On a phone, open **More** and select **Percentage view**. The theme and **Hide dust** are in **Settings**, under **Appearance**.
@@ -22,6 +24,8 @@ Select **%** in the top bar to show every amount as a share of your portfolio. F
 ## What changed
 
 The **Pulse** area highlights important movements from the previous snapshot. A position you left out of new snapshots is not counted as a movement. Select **What Changed** for the full explanation, including activity, deposits, withdrawals, rewards, and uncertain changes.
+
+**Top gain**, **Top drop** and **Money added** or **Money removed** appear only when the amount is large enough to matter for the portfolio: at least $500, or 1% of the portfolio. On a quiet day the Pulse area shows fewer items.
 
 **Earned** shows what your positions made over the last 30 days, measured from your snapshots, with any borrowing cost subtracted. It is the last 30 days of the [Earnings calendar](/core/history-performance#earnings) on History, so the two always agree. Hover it for the last day and for how much of your earning positions it covers; select it to open the calendar. It is hidden when nothing can be measured yet or the amount is too small to matter for the portfolio. See [how Earned APY is measured](/guides/yield-maturities#earned-apy).
 
@@ -37,7 +41,7 @@ Use these sections to understand concentration:
 - **Chain Distribution** groups value by network.
 - **Top Protocols & Holdings by Value** shows the largest concentrations.
 
-**Asset Allocation**, **Chain Distribution** and **Top Protocols & Holdings by Value** list their rows largest first, each with a bar, its value and its share. Select a row in **Top Protocols & Holdings by Value** to open that protocol.
+**Asset Allocation**, **Chain Distribution** and **Top Protocols & Holdings by Value** list their rows largest first, each with a bar, its value and its share. A row worth less than $500 and less than 1% of the portfolio, and anything past the eighth row, is added to the last row, **Other** (in Chain Distribution, **Other chains**), so the shares still add up; hover that row to see what it holds. History's **Latest Asset Split** does the same. Select a row in **Top Protocols & Holdings by Value** to open that protocol.
 
 For a portfolio that borrows, these sections show what is held, and the borrowing appears under the portfolio total.
 
@@ -64,4 +68,4 @@ Retina shows a dash when a current reliable rate is unavailable, including stale
 
 The metals summary applies current spot prices to your saved gold and silver weights. When the spot price service cannot be reached, the summary uses the last known spot price. It shows only the metals you hold. Gold and silver tokens in your wallets, such as PAXG, XAUT and tokenized gold funds, count as **Metals** in the asset allocation, History and Ask Retina, next to the gold and silver you saved. The watchlist refreshes selected public token prices separately from snapshot values.
 
-Last verified: 15 September 2026.
+Last verified: 2 November 2026.
