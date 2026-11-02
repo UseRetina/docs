@@ -13,7 +13,7 @@ Open a wallet to inspect:
 
 - Its value and the change since the last snapshot, above the wallet's value history
 - What it earned over the last 30 days, the [Earned APY](/guides/yield-maturities#earned-apy) of its positions (point at it to see the quoted APY), how much of the wallet sits in protocols, what it has borrowed, and its next unlock
-- Its positions, each with its Quoted APY and Earned APY
+- Its positions, each with its [Earned APY](/guides/yield-maturities#earned-apy) (point at it or tap it for the quoted rate; a position with no Earned APY yet shows its quoted rate, marked **Quoted**)
 - **Tokens**: the tokens held in the wallet itself
 - **Where it is**: the wallet's value by protocol, chain, and asset
 - What it earned day by day, in its own [Earnings calendar](/core/history-performance#earnings)
@@ -24,7 +24,7 @@ The spot holdings section combines matching tokens across wallets. Open a token 
 
 ## Positions
 
-The Positions view is the most detailed portfolio table. It contains detected and manual positions from the current snapshot, with an option to include earlier snapshots.
+The Positions view is the most detailed portfolio table. It contains detected and manual positions from the current snapshot, with an option to include earlier snapshots. On a phone, each position is one line with its token, protocol, wallet, value, Earned APY and maturity; tap a line to see the position's details under it.
 
 Filter by wallet, chain, protocol, asset, position type, or source. Search token names, protocols, and notes. You can hide dust and export the filtered result as CSV.
 
@@ -38,7 +38,7 @@ When Retina starts tracking a protocol you entered by hand, the Dashboard and Po
 
 ## Protocols
 
-The Protocols view groups the active snapshot by protocol. Each card summarizes value, position count, asset exposure, quoted APY, and estimated daily income where available. A protocol's page adds its [Earned APY](/guides/yield-maturities#earned-apy), what any borrowing cost, each position's own Earned APY, and an [Earnings calendar](/core/history-performance#earnings) for that protocol.
+The Protocols view groups the active snapshot by protocol. Each card summarizes value, position count, asset exposure, quoted APY, and estimated daily income where available. A protocol's page leads with its [Earned APY](/guides/yield-maturities#earned-apy); point at it or tap it to see the quoted APY. The page also shows what any borrowing cost, an APY for each position, and an [Earnings calendar](/core/history-performance#earnings) for that protocol. A position's APY is the Earned APY; a position Retina has not measured yet shows its quoted APY, marked **Quoted**, and where a position has both, its quoted APY opens on a point or a tap.
 
 Search by name, filter by asset or chain, and sort by value, APY, positions, or name. A protocol with positions on several chains appears when any of them is selected.
 
