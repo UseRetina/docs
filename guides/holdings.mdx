@@ -28,13 +28,13 @@ The Positions view is the most detailed portfolio table. It contains detected an
 
 Filter by wallet, chain, protocol, asset, position type, or source. Search token names, protocols, and notes. You can hide dust and export the filtered result as CSV.
 
-Select a row to inspect available fields such as amount, value, protocol, maturity, APY, liquidity, wallet identity, and source. Lending and borrowing positions also show the health factor, loan to value, and liquidation threshold that the protocol reports.
+Select a row to inspect available fields such as amount, value, protocol, maturity, APY, liquidity, wallet identity, and source. When the source names the vault or market a position sits in, for example a Morpho vault, that name appears under the token, starting with the next snapshot. Lending and borrowing positions also show the health factor, loan to value, and liquidation threshold that the protocol reports.
 
 If a detected position is wrong, for example a deposit you have already withdrawn, select it in the latest snapshot and choose **Leave out of new snapshots**. Retina leaves that one position out from the next snapshot on, in that wallet only, and saved snapshots keep what they recorded. To undo the choice before the next snapshot, choose **Keep it** in the same row. After the next snapshot, the position is listed in **Settings**, under **Portfolio settings**, **Hidden positions**, with **Bring back**. When the source stops reporting the position, Retina removes it from that list by itself.
 
 Use **+ Add position** for a manual holding. Editing a manual position affects the current working portfolio and future snapshots. Saved older snapshots remain unchanged.
 
-When Retina starts tracking a protocol you entered by hand, the Dashboard and Positions view ask whether to remove the manual entry, so the same holding is not counted twice. Choose **Keep both** when they are different holdings. The **Manual** source filter lists every position you entered by hand.
+When a snapshot starts tracking a position you entered by hand, Retina leaves the manual entry out of that snapshot and removes the entry, so the same holding is counted once. Retina does this when the newly tracked amount in the same protocol and wallet is within 1% of your entry. With **Remove this entry when Retina starts tracking the position** switched on for the entry, which is the default, Retina also does this when the newly tracked amount is between 80% and 125% of your entry, because an amount typed by hand drifts from the live value. The Dashboard and Positions view name the entry that was removed. When the amounts differ more than that, the Dashboard and Positions view ask whether to remove the manual entry. Choose **Keep both** when they are different holdings. The **Manual** source filter lists every position you entered by hand.
 
 ## Protocols
 
