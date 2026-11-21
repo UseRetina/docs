@@ -30,7 +30,11 @@ Filter by wallet, chain, protocol, asset, position type, or source. Search token
 
 Select a row to inspect available fields such as amount, value, protocol, maturity, APY, liquidity, wallet identity, and source. When the source names the vault or market a position sits in, for example a Morpho vault, that name appears under the token, starting with the next snapshot. Lending and borrowing positions also show the health factor, loan to value, and liquidation threshold that the protocol reports.
 
+A liquidity pool position appears as one row named by its pair, such as USDC/USDT or WETH/USDC, with the tokens the pool holds for you listed under the name. The mix of tokens in a pool changes whenever someone trades in that pool, so What Changed and History compare the pool as one position, and a change in its mix alone is never reported. In Asset Allocation, each token in a pool still counts in its own asset class, so a WETH/USDC pool adds to both ETH and USD.
+
 If a detected position is wrong, for example a deposit you have already withdrawn, select it in the latest snapshot and choose **Leave out of new snapshots**. Retina leaves that one position out from the next snapshot on, in that wallet only, and saved snapshots keep what they recorded. To undo the choice before the next snapshot, choose **Keep it** in the same row. After the next snapshot, the position is listed in **Settings**, under **Portfolio settings**, **Hidden positions**, with **Bring back**. When the source stops reporting the position, Retina removes it from that list by itself.
+
+A data source sometimes keeps listing a protocol position after you withdraw it. Retina leaves such a position out of a snapshot by itself when the wallet's own transactions show the withdrawal: after the source last updated the position, the wallet received back at least 99% of its amount from the same protocol, on the same chain, and put none of it back. A partial withdrawal keeps the position.
 
 Use **+ Add position** for a manual holding. Editing a manual position affects the current working portfolio and future snapshots. Saved older snapshots remain unchanged.
 
