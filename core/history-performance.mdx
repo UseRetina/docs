@@ -26,7 +26,7 @@ Use the date range and value or performance controls to focus the comparison.
 
 ## Earnings
 
-The **Earnings** card shows what your positions earned, measured from your snapshots, with any borrowing cost subtracted. It follows the date range above it.
+The **Earnings** card shows what your positions earned, measured from your snapshots, with any borrowing cost subtracted. It follows the date range above it. On a protocol or wallet page, the card starts on the first day that protocol or wallet held something.
 
 With **Days** selected, each day is a square in a month calendar with the day's earnings in it. A stronger tint earned more; a red tint cost more than it earned. Select a day, or hover it on a computer, to see what each protocol earned, any borrowing cost, and how much of your earning positions could be measured. **Weeks** and **Months** show the same earnings as bars, split by protocol. The five protocols that earned the most in the range have their own colour, and the rest share one.
 
@@ -57,7 +57,7 @@ The review can include:
 - Wallets or positions that appeared or disappeared
 - Differences Retina could not classify confidently
 
-Retina also reads the snapshots on either side of a transaction. Dollars sent into one of your tracked Polymarket wallets, or received from one, count as a move between your own wallets when that Polymarket wallet's value changed by the same amount. A token paid out of a protocol position you hold, in the amount that position held, counts as a protocol exit even when the transfer does not name the protocol.
+Retina also reads the snapshots on either side of a transaction. Dollars sent into one of your tracked Polymarket wallets, or received from one, count as a move between your own wallets when that Polymarket wallet's value changed by the same amount. A token paid out of a protocol position you hold, in the amount that position held, counts as a protocol exit even when the transfer does not name the protocol. Money sent into a liquidity pool you hold counts as a move into that pool the same way: when transfers to one address between two snapshots add up, within $25 or 3%, to how much a pool in that wallet grew, they are the pool's deposits and do not count as money leaving.
 
 Retina shows uncertainty instead of turning an incomplete explanation into a precise claim.
 
