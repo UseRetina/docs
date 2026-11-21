@@ -48,6 +48,8 @@ Search by name, filter by asset or chain, and sort by value, APY, positions, or 
 
 Deposits Retina can place in another protocol's product appear under that protocol. For example, a deposit of Tori's trUSD in an Upshift vault appears under Tori.
 
+A loop stays in the protocol you borrow from. When a wallet deposits collateral in a lending protocol such as Morpho and borrows against it on the same chain, the collateral appears under that lending protocol beside the debt, so the protocol shows the loop's net value. A Pendle PT used this way, such as PT-reUSD in Morpho, appears under Morpho. The same PT held without a loan appears under its issuer, such as Re.
+
 A protocol's own token held in a wallet appears under that protocol as well. JLP in a Solana wallet appears under Jupiter Perps with the JLP pool's quoted APY, and wiTRY on MegaETH appears under Brix. When a provider reports one deposit twice, once as a protocol position and once as the vault token in your wallet, Retina counts the deposit once. A Strata tranche token such as jrUSDat appears once, under Strata.
 
 ## Export options
