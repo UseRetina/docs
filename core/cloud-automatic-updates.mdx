@@ -46,7 +46,12 @@ Turn off any notification category you do not want.
 
 ## Review protection
 
-Retina does not add a partial automatic result to history. When a wallet does not load completely because a data source is briefly unavailable, Retina reads that wallet again within the same automatic run, up to two more times: about a minute and a half later, then about eight minutes later. Retina grades the result after those reads.
+Retina does not add a partial automatic result to history, and it works to complete each automatic update before asking you anything. The wallets in one snapshot can be read up to two hours apart.
+
+- When a wallet does not load completely because a data source is briefly unavailable, Retina reads that wallet again within the same automatic run, about a minute and a half later and then about eight minutes later.
+- When the data source that reads a whole chain is unavailable, Retina keeps trying that chain for up to 100 minutes before the update stops.
+- When a wallet is still incomplete after those reads, the snapshot waits in **Updates** while Retina reads the wallet again by itself, 15, 30, 50, 75 and 100 minutes after the snapshot started. A read that completes the wallet saves the snapshot at its own time, with nothing for you to do.
+- Retina tells you about the snapshot only when those reads are spent and the wallet is still incomplete.
 
 - A blocking finding waits for your review.
 - An advisory finding is saved with its reason attached.
@@ -65,7 +70,7 @@ A snapshot saved while a wallet did not load completely gets a note in **Updates
 
 Choose **Use this value** or **Check again** for every listed balance. You can confirm one balance and recheck another in the same review. Retina rechecks only the wallets connected to the balances you selected, remembers the confirmed choices, and saves the complete snapshot after the remaining checks pass. Choose **Discard snapshot** when you do not want the unsaved capture in history.
 
-**Check again** is available for 25 minutes after the wallets in a snapshot were first read. A snapshot records one moment, so Retina reads all of its wallets within 30 minutes of each other, and a wallet read after that window would put a later balance into an older snapshot. An older review offers two choices: **Save snapshot** keeps the values as they were read, and **Discard snapshot** leaves that time out of history. When a wallet did not load completely, **Discard snapshot** is the highlighted choice, because the next automatic update reads every wallet again and every saved total stays complete.
+**Check again** is available for 1 hour and 55 minutes after the wallets in a snapshot were first read. Retina reads all of a snapshot's wallets within two hours of each other, and a wallet read after that would put a later balance into an older snapshot. An older review offers two choices: **Save snapshot** keeps the values as they were read, and **Discard snapshot** leaves that time out of history. When a wallet did not load completely, **Discard snapshot** is the highlighted choice, because the next automatic update reads every wallet again and every saved total stays complete.
 
 Closing **Updates** does not stop an active check. The notice on Home can be dismissed while work continues, and the **Updates** indicator remains available for the current state. A new review or failure can show a new notice.
 
