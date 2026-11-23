@@ -53,7 +53,7 @@
         "icon": "layout-dashboard",
         "expanded": true,
         "pages": [
-          "guides/dashboard",
+          "guides/home",
           "guides/holdings",
           "guides/yield-maturities",
           "guides/polymarket",
@@ -76,7 +76,8 @@
   },
   "redirects": [
     { "source": "/getting-started/beta-access", "destination": "/getting-started/quickstart" },
-    { "source": "/pages/dashboard", "destination": "/guides/dashboard" },
+    { "source": "/pages/dashboard", "destination": "/guides/home" },
+    { "source": "/guides/dashboard", "destination": "/guides/home" },
     { "source": "/pages/polymarket", "destination": "/guides/polymarket" },
     { "source": "/pages/wallets", "destination": "/guides/holdings" },
     { "source": "/pages/protocols", "destination": "/guides/holdings" },

@@ -8,7 +8,7 @@
     "core/snapshots": ["setup.html", "dashboard.html", "snapshot-engine.js", "retina-cloud.js", "functions/_shared/cloud-api.js"],
     "core/history-performance": ["dashboard.html", "retina-activity.js", "retina-cloud.js"],
     "core/cloud-automatic-updates": ["retina-cloud.js", "functions/_shared/cloud-api.js", "functions/_shared/scheduler.js", "functions/_shared/snapshot-runner.js", "functions/_shared/notifications.js"],
-    "guides/dashboard": ["dashboard.html", "retina-activity.js"],
+    "guides/home": ["dashboard.html", "retina-activity.js"],
     "guides/holdings": ["dashboard.html", "setup.html", "snapshot-engine.js"],
     "guides/yield-maturities": ["dashboard.html", "snapshot-engine.js"],
     "guides/polymarket": ["dashboard.html", "snapshot-engine.js", "functions/_shared/snapshot-runner.js"],
