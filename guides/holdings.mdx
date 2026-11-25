@@ -25,17 +25,17 @@ The spot holdings section combines matching tokens across wallets. Open a token 
 
 The Positions view is the most detailed portfolio table. It contains detected and manual positions from the current snapshot, with an option to include earlier snapshots. On a phone, each position is one line with its token, protocol, wallet, value, Earned APY and maturity; tap a line to see the position's details under it.
 
-Filter by wallet, chain, protocol, asset, position type, or source. Search token names, protocols, and notes. You can hide dust and export the filtered result as CSV.
+Filter by wallet, chain, protocol, asset, position type, or source. Search token names, protocols, and notes. Hide dust and export the filtered result as CSV.
 
-Select a row to inspect available fields such as amount, value, protocol, maturity, APY, liquidity, wallet identity, and source. When the source names the vault or market a position sits in, for example a Morpho vault, that name appears under the token, starting with the next snapshot. Lending and borrowing positions also show the health factor, loan to value, and liquidation threshold that the protocol reports.
+Select a row to see its amount, value, protocol, maturity, APY, liquidity, wallet, and source. When the source names the vault or market a position sits in, for example a Morpho vault, that name appears under the token, starting with the next snapshot. Lending and borrowing positions also show the health factor, loan to value, and liquidation threshold that the protocol reports.
 
-A liquidity pool position appears as one row named by its pair, such as USDC/USDT or WETH/USDC, with the tokens the pool holds for you listed under the name. The mix of tokens in a pool changes whenever someone trades in that pool, so What Changed and History compare the pool as one position, and a change in its mix alone is never reported. In Asset Allocation, each token in a pool still counts in its own asset class, so a WETH/USDC pool adds to both ETH and USD.
+A liquidity pool position appears as one row named by its pair, such as USDC/USDT or WETH/USDC, with the tokens the pool holds for you listed under the name. The mix of tokens in a pool changes whenever someone trades in that pool, so What Changed and History compare the pool as one position, and a change in its mix alone is never reported. In Asset Allocation, each token in a pool counts in its own asset class, so a WETH/USDC pool adds to both ETH and USD.
 
-If a detected position is wrong, for example a deposit you have already withdrawn, select it in the latest snapshot and choose **Leave out of new snapshots**. Retina leaves that one position out from the next snapshot on, in that wallet only, and saved snapshots keep what they recorded. To undo the choice before the next snapshot, choose **Keep it** in the same row. After the next snapshot, the position is listed in **Settings**, under **Portfolio settings**, **Hidden positions**, with **Bring back**. When the source stops reporting the position, Retina removes it from that list by itself.
+If a detected position is wrong, for example a deposit you already withdrew, select it in the latest snapshot and choose **Leave out of new snapshots**. Retina leaves that one position out from the next snapshot on, in that wallet only, and saved snapshots keep what they recorded. To undo the choice before the next snapshot, choose **Keep it** in the same row. After the next snapshot, the position is listed in **Settings**, under **Portfolio settings**, **Hidden positions**, with **Bring back**. When the source stops reporting the position, Retina removes it from that list by itself.
 
 A data source sometimes keeps listing a protocol position after you withdraw it. Retina leaves it out of a snapshot by itself when, after the source last updated it, the wallet received back at least 99% of its amount from the same protocol on the same chain and put none back. A partial withdrawal keeps the position.
 
-Use **+ Add position** for a manual holding. Editing a manual position affects the current working portfolio and future snapshots. Saved older snapshots remain unchanged.
+Use **+ Add position** for a manual holding. Editing a manual position changes the current portfolio and future snapshots.
 
 When a snapshot starts tracking a position you entered by hand, Retina removes the manual entry, so the same holding is counted once. Retina does this when the tracked amount in the same protocol and wallet is within 1% of your entry, or, with **Remove this entry when Retina starts tracking the position** switched on (the default), between 80% and 125% of it, because an amount typed by hand drifts from the live value. Home and the Positions view name the entry that was removed, and ask what to do when the amounts differ more than that. Choose **Keep both** when they are different holdings. The **Manual** source filter lists every position you entered by hand.
 
@@ -47,7 +47,7 @@ Search by name, filter by asset or chain, and sort by value, APY, positions, or 
 
 Deposits Retina can place in another protocol's product appear under that protocol. For example, a deposit of Tori's trUSD in an Upshift vault appears under Tori.
 
-A loop stays in the protocol you borrow from. When a wallet deposits collateral in a lending protocol such as Morpho and borrows against it on the same chain, the collateral appears under that lending protocol beside the debt, so the protocol shows the loop's net value. A Pendle PT used this way, such as PT-reUSD in Morpho, appears under Morpho. The same PT held without a loan appears under its issuer, such as Re.
+A loop stays in the protocol you borrow from. When a wallet deposits collateral in a lending protocol such as Morpho and borrows against it on the same chain, the collateral appears under that lending protocol beside the debt, so the protocol shows the loop's net value. A Pendle PT used this way, such as PT-reUSD in Morpho, appears under Morpho. The same PT held without a loan appears under its issuer, such as Re. A position on Pendle has the type Pendle PT, Pendle YT or Pendle LP.
 
 A protocol's own token held in a wallet appears under that protocol as well. JLP in a Solana wallet appears under Jupiter Perps with the JLP pool's quoted APY, and wiTRY on MegaETH appears under Brix. When a provider reports one deposit twice, once as a protocol position and once as the vault token in your wallet, Retina counts the deposit once. A Strata tranche token such as jrUSDat appears once, under Strata.
 
@@ -61,4 +61,4 @@ The export menu can produce:
 
 Use the full JSON backup when you need a restorable copy. CSV is intended for analysis outside Retina.
 
-Last verified: 22 November 2026.
+Last verified: 25 November 2026.
