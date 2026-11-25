@@ -26,8 +26,7 @@ Each change saves as you make it. On Home, **Next snapshot** counts down to the 
 Automatic updates run without an open browser. They use the sources and portfolio settings saved with your account. **Add snapshot now** runs the same way, with or without automatic updates, so a capture you start continues after you close the tab.
 
 Open **Updates** from the sidebar, or from the top-right menu on a phone, to see whether a portfolio update is running,
-waiting for your review, or needs another try. You can close this panel while an
-update is running. Retina continues it in the background.
+waiting for your review, or needs another try.
 
 ## Notifications
 
@@ -57,6 +56,7 @@ Retina does not add a partial automatic result to history, and it tries to compl
 - An advisory finding is saved with its reason attached.
 - Later automatic updates can continue while an earlier capture waits for review.
 - When a later capture is paused by the same change, one review covers both captures. Saving that review saves both captures in the order they were taken, and discarding the review discards both.
+- A paused capture is confirmed when an automatic update at least 6 hours later reads the same change. Retina then saves both, and every earlier paused capture that reads the same, oldest first.
 - A capture paused by a different change gets its own review. Save or discard the earlier review first, so both captures can stay in history.
 - An unsaved capture taken before a snapshot that is already saved can no longer be added to history, and Retina removes that capture from **Updates**.
 
@@ -72,7 +72,7 @@ When wallets did not load completely, the review offers **Check again now**, **S
 
 **Check again** is available for 1 hour and 55 minutes after a snapshot's wallets were first read; a later read would put a later balance into an older snapshot. An older review offers **Save snapshot**, which keeps the values as read, and **Discard snapshot**, which leaves that time out of history. When a wallet did not load completely, **Discard snapshot** is highlighted, so every saved total stays complete.
 
-Closing **Updates** does not stop an active check. The notice on Home can be dismissed while work continues, and the **Updates** indicator remains available for the current state. A new review or failure can show a new notice.
+Closing **Updates** or dismissing the notice on Home does not stop an active check.
 
 ## Snapshot allowances
 
