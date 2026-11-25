@@ -41,6 +41,8 @@ Pendle positions have one exception. When Pendle cannot be reached, Retina keeps
 
 A Pendle position that no longer appears in your wallet data, with no transaction to explain the change, is left out of the snapshot when the position is worth at most 0.1% of your portfolio. A small position that no source can price keeps the value per token Pendle last gave it, within the same 0.1%. A larger position in either case waits until Pendle can be reached.
 
+Polymarket wallets have a similar exception. When a Polymarket wallet still cannot be read after the automatic retries, the snapshot saves with the balances and positions that wallet held in the last snapshot, for up to 72 hours after they were read. A newly added wallet must be read once first.
+
 ## Review before saving
 
 Retina checks whether required sources returned complete results and whether large changes can be explained. A change that a transaction Retina captured accounts for, such as a withdrawal from a protocol, is explained and does not pause the snapshot.
